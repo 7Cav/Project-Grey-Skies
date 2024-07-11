@@ -13,7 +13,7 @@
  * call rScripts_fnc_tightlz_startaction
  *
  * Public: No
- * List of Acceptable _objStructureIDs
+ * List of Acceptable _objStructureIDs:
  *	OBJ_CAPTURE_HQ
  *	OBJ_DESTORY_RADIO
  *	OBJ_DESTROY_SAM
@@ -30,26 +30,20 @@
  *	OBJ_RESCUE_POW
  *	OBJ_CSAR
  *	OBJ_CAPTURE_AIRFIELD
+ *
+ * List of Acceptable _objStructureTerrian:
+ *  WOODLAND
+ *  SNOW
+ *  DESERT
+ *
+ * _objSpecificBuildingFill is meant for buildings already on the map. This would place the objects in that building if needed like a hanger
+ *
+ *
  */
 params [["_SearchRadius",50],["_SearchPosition",[0,0,0]]];
-_objStructureID="";
-_buildingArray=nearestObjects[_SearchPosition,["Building"],_SearchRadius];
+_objStructureID="OBJ_CAPTURE_HQ";
+_objStructureTerrian="WOODLAND";
+_objSpecificBuildingFill="";
+_objLocations=[_SearchPosition,_SearchRadius,true] call BIS_fnc_ObjectsGrabber;
 
-_buildingInfo = _buildingArray apply {
-    private _obj = _x;
-    private _className = typeOf _obj;
-    private _position = getPosASL _obj; // getPosASL gives position relative to sea level
-    private _rotation = vectorDir _obj; // vectorDir gives direction the object is facing
-    [_className, _position, _rotation]
-};
-
-_OPFORArray=nearestObjects[_SearchPosition,["StaticWeapon","Man"],_SearchRadius];
-_OPFORInfo = _OPFORArray apply {
-    private _obj = _x;
-    private _className = typeOf _obj;
-    private _position = getPosASL _obj; // getPosASL gives position relative to sea level
-    private _rotation = vectorDir _obj; // vectorDir gives direction the object is facing
-    [_className, _position, _rotation]
-};
-
-[_objStructureID,_buildingInfo,_OPFORInfo];
+[_objStructureID,_objStructureTerrian,_objSpecificBuildingFill,_objLocations];
