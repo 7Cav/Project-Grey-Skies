@@ -1,4 +1,3 @@
-#include "..\script_component.hpp";
 /*
  * Author: CW3.Sparrow.P
  * [Description of Function]
