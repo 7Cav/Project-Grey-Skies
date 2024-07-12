@@ -45,15 +45,7 @@ _objStructureID="OBJ_CAPTURE_HQ";
 _objStructureTerrian="WOODLAND";
 _objSpecificBuildingFill="";
 _objLocations=[_SearchPosition,_SearchRadius,true] call BIS_fnc_ObjectsGrabber;
-
-copyToClipboard [_objStructureID,_objStructureTerrian,_objSpecificBuildingFill,_objLocations];
-
-//Bethea had me edit your translator to pull the composition directly to the clipboard.  Code is commented below for you to try.
-
-/*params [["_SearchRadius",50],["_SearchPosition",[0,0,0]]]; 
-_objStructureID="OBJ_CAPTURE_HQ"; 
-_objStructureTerrian="WOODLAND"; 
-_objSpecificBuildingFill=""; 
-_objLocations=[_SearchPosition,_SearchRadius,true] call BIS_fnc_ObjectsGrabber; 
- 
-copyToClipboard _objLocations;*/
+_stringbs=_objLocations splitstring "*/";
+_stringbs2=_stringbs select 1;
+_FinalProduct=parseSimpleArray _stringbs2;
+[_objStructureID,_objStructureTerrian,_objSpecificBuildingFill,_FinalProduct];
