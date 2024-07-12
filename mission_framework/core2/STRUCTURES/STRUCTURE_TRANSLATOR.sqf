@@ -48,4 +48,4 @@ _objLocations=[_SearchPosition,_SearchRadius,true] call BIS_fnc_ObjectsGrabber;
 _stringbs=_objLocations splitstring "*/";
 _stringbs2=_stringbs select 1;
 _FinalProduct=parseSimpleArray _stringbs2;
-copyToClipboard format["[%1,%2,%3,%4]",_objStructureID,_objStructureTerrian,_objSpecificBuildingFill,_FinalProduct];
+copyToClipboard format["[""%1"",""%2"",""%3"",%4]",_objStructureID,_objStructureTerrian,_objSpecificBuildingFill,_FinalProduct];
