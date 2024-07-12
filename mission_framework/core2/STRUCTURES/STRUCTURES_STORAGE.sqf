@@ -70,3 +70,59 @@ Using orientation of objects: yes
 	[""Land_fort_bagfence_corner"",[-10.4503,-12.6355,0],0,1,0,[0,0],"""","""",true,false]
 ]"]
 ]
+
+/*
+Grab data:
+Mission: tempMissionSP
+World: VR
+Anchor position: [0, 0]
+Area size: 50
+Using orientation of objects: yes
+*/
+
+[
+	
+	//Westcott first HQ test start below.  
+	["Land_HelipadEmpty_F",[0,0,0],0,1,0,[0,0],"","",true,false], 
+	["Land_HelipadEmpty_F",[-0.5,0.5,0],0,1,0,[0,0],"","",true,false], 
+	["Land_WaterBarrel_F",[-3.6499,-1.28086,0],359.995,1,0,[8.45646e-006,-8.68667e-006],"","",true,false], 
+	["babe_helper",[0,0,-5],0,1,0,[0,0],"","",true,false], 
+	["Land_Cargo_HQ_V1_F",[2.27002,-3.25742,0],0,1,0,[0,0],"","",true,false], 
+	["Land_CampingChair_V2_F",[0.162244,6.09268,6.19888e-006],75.0081,1,0,[-0.00143724,-0.000645436],"","",true,false], 
+	["Land_TreeBin_F",[-4.89978,3.94814,0],270,1,0,[0,0],"","",true,false], 
+	["Land_CampingChair_V2_F",[0.957776,6.88858,5.24521e-006],59.9757,1,0,[-0.00162509,-0.000285386],"","",true,false], 
+	["Land_WoodenTable_large_F",[-0.0249016,7.34414,0],224.69,1,0,[-2.56088e-005,-0.000171889],"","",true,false], 
+	["Land_CampingChair_V2_F",[-0.89844,7.50721,-1.90735e-006],315.008,1,0,[0.000832898,-0.00111596],"","",true,false], 
+	["FlagPole_F",[-4.87793,3.95547,-0.4225],0,1,0,[0,0],"","",true,false], 
+	["Land_CampingChair_V2_F",[-0.368035,8.39102,4.29153e-006],345.009,1,0,[-0.000424114,0.000935619],"","",true,false], 
+	["GunrackTK_EP1",[1.05274,10.4051,0],180,1,0,[0,0],"","",true,false], 
+	["GunrackTK_EP1",[2.05274,10.4051,0],180,1,0,[0,0],"","",true,false], 
+	["Land_A_tent",[-11.2596,-1.86539,0],270.291,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_5_F",[11.5962,2.84268,0],90,1,0,[0,-0],"","",true,false], 
+	["Land_LampShabby_F",[-2.25592,-10.9552,0],270,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_5_F",[-2.74067,-12.2787,0],0,1,0,[0,0],"","",true,false], 
+	["Land_A_tent",[-11.2518,-5.1478,0],270.93,1,0,[0,0],"","",true,false], 
+	["Land_CamoNet_EAST",[-2.04907,12.4183,0],0,1,0,[0,0],"","",true,false], 
+	["CUP_hromada_beden_dekorativniX",[-3.63401,11.9822,0],240,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_1_F",[2.9683,-12.2229,0],0,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_5_F",[11.5962,-2.65732,0],90,1,0,[0,-0],"","",true,false], 
+	["Land_HBarrier_5_F",[3.97632,-11.0348,0],0,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_5_F",[-8.39335,-12.2793,0],0,1,0,[0,0],"","",true,false], 
+	["Land_fort_bagfence_round",[11.0245,9.87295,0],75,1,0,[0,0],"","",true,false], 
+	["Misc_Backpackheap",[2.59876,13.5736,0],0,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_1_F",[9.73255,-11.1559,0],270,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_3_F",[11.5772,-8.16709,0],90,1,0,[0,-0],"","",true,false], 
+	["Land_fort_bagfence_long",[8.08618,13.2342,0],90,1,0,[0,-0],"","",true,false], 
+	["Logic",[9,9,9],0,1,0,[0,0],"","",true,false], 
+	["Land_HBarrier_1_F",[11.1073,-11.0289,0],255,1,0,[0,0],"","",true,false], 
+	["Land_fort_bagfence_long",[6.33472,14.4549,0],0,1,0,[0,0],"","",true,false], 
+	["Land_fort_rampart",[-13.9489,0.497756,0],90.226,1,0,[0,-0],"","",true,false], 
+	["Land_fort_rampart",[0.100098,14.7435,0],180,1,0,[0,0],"","",true,false], 
+	["Land_BagBunker_Small_F",[-11.1921,-13.7319,0],0,1,0,[0,0],"","",true,false], 
+	["Misc_cargo_cont_net1",[-11.0238,13.5946,0],0,1,0,[0,0],"","",true,false], 
+	["Land_fort_rampart",[-13.861,-7.89662,0],87.7064,1,0,[0,0],"","",true,false], 
+	["Land_fort_bagfence_corner",[-16.4409,8.89207,0],0,1,0,[0,0],"","",true,false], 
+	["Land_fort_rampart",[-9.6499,14.8685,0],180,1,0,[0,0],"","",true,false], 
+	["Land_fort_bagfence_long",[-17.533,12.5949,0],90,1,0,[0,-0],"","",true,false], 
+	["Land_fort_bagfence_corner",[-16.883,15.7814,0],90,1,0,[0,-0],"","",true,false]
+]
