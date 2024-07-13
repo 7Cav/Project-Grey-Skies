@@ -14,6 +14,3 @@
  * Public: No
  *
  */
-params ["param1", "param2"];
-
-[Code Goes here]

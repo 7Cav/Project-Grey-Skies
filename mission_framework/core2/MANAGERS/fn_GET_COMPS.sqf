@@ -14,6 +14,6 @@
  * Public: No
  *
  */
-params ["param1", "param2"];
-
-[Code Goes here]
+GS_HQ_OBJS=#include "core2/STRUCTURES/WOODLAND/WOODLAND_HQ.sqf";
+GS_RADIO_OBJS=#include "core2/STRUCTURES/WOODLAND/WOODLAND_RADIO.sqf";
+GS_MORTAR_OBJS=#include "core2/STRUCTURES/WOODLAND/WOODLAND_MORTAR.sqf";
