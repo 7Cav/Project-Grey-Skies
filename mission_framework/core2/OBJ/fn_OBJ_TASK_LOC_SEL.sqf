@@ -23,3 +23,4 @@ _MultTaskPOS=[];
 	_TaskandPOS=[_x,_TaskPOS];
 	_MultTaskPOS pushBack _TaskandPOS;
 }foreach _taskIDs;
+[_AOInfo,_MultTaskPOS] call core2_fnc_OBJ_TASK_MANGER;

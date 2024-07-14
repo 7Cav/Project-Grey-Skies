@@ -15,7 +15,7 @@
  * Public: No
  *
  */
-params ["_AOInfo", "_NumOfTasks"];
+params ["_AOInfo", ["_NumOfTasks",0]];
 
 _TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
 //_RandomNumber = random 100;
@@ -97,3 +97,4 @@ for _i from 0 to _NumOfTasks do {
 	};
 };
 
+[_AOInfo,_TaskIDs] call core2_fnc_OBJ_TASK_LOC_SEL;

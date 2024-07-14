@@ -4,6 +4,7 @@
 
     Description:
        Defines presets for OPFOR faction.
+       
 
 */
 // OPFOR Infantry - General
