@@ -9,7 +9,7 @@
  * Return Value:
  * Nothing
  *
- * Example:
+ * Example:////////////
  * call rScripts_fnc_tightlz_startaction
  *
  * Public: No

@@ -87,7 +87,7 @@ for _i from 0 to _NumOfTasks do {
 			_TaskIDs pushBack 'OBJ_KILL_OFF';};
 		case (_randomNum==11 && _NumPOW<_MaxNumPOW):{
 			_NumPOW=_NumPOW+1;
-			_TaskIDs pushBack 'OBJ_KILL_OFF';};
+			_TaskIDs pushBack 'OBJ_RESCUE_POW';};
 		case (_randomNum==12 && _NumRescuePilot<_MaxNumRescuePilot):{
 			_NumRescuePilot=_NumRescuePilot+1;
 			_TaskIDs pushBack 'OBJ_CSAR';};
