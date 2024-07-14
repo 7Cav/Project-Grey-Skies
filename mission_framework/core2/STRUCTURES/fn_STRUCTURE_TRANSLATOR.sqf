@@ -1,7 +1,6 @@
-#include "..\script_component.hpp";
 /*
  * Author: CW3.Sparrow.P
- * Compiles an array of Object and OPFOR locations for the Structures storage file
+ * Compiles an array of Object and OPFOR locations for the Structures storage file, Currently just gets the output of BIS_fnc_ObjectsGrabber
  *
  * Arguments:
  * [List of Arguements]

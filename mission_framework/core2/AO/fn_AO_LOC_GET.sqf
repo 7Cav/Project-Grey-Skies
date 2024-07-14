@@ -1,4 +1,3 @@
-#include "..\script_component.hpp";
 /*
  * Author: CW3.Sparrow.P
  * Gets the Position of a random AO placed in the world
