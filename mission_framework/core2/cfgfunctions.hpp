@@ -28,6 +28,6 @@ class core2
 	class STRUCTURES
 	{
 		file = "core2\STRUCTURES";
-		class fn_STRUCTURE_TRANSLATOR {};
+		class STRUCTURE_TRANSLATOR {};
 	};
 };
