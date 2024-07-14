@@ -18,8 +18,8 @@
 _ArrayofAOs=[];
 _RandomAO="";
 _AOInfo=[];
-
-_ArrayofAOs=["AO_SPAWNER_"] call BIS_fnc_getMarkers;
+_LookForText="zone_spawn_";
+_ArrayofAOs=[_LookForText] call BIS_fnc_getMarkers;
 _RandomAO=selectRandom _ArrayofAOs;
 _AOInfo=getPos _RandomAO;
 [_AOInfo,0] call core2_fnc_OBJ_TASK_SEL;
