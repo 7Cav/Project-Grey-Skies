@@ -16,9 +16,9 @@
  */
 params ["_TaskID", ["_RandomNumber",0],["_GetNumberInArray",0]];
 
-GS_HQ_OBJS=#include "core2/STRUCTURES/WOODLAND/WOODLAND_HQ.sqf";
-GS_RADIO_OBJS=#include "core2/STRUCTURES/WOODLAND/WOODLAND_RADIO.sqf";
-GS_MORTAR_OBJS=#include "core2/STRUCTURES/WOODLAND/WOODLAND_MORTAR.sqf";
+GS_HQ_OBJS=call core2_fnc_WOODLAND_HQ;
+GS_RADIO_OBJS=call core2_fnc_WOODLAND_RADIO;
+GS_MORTAR_OBJS=call core2_fnc_WOODLAND_MORTAR;
 if (_GetNumberInArray==0) then {
 	switch (_TaskID) do {
 		case 'OBJ_CAPTURE_HQ':{GS_HQ_OBJS select _RandomNumber;};
