@@ -19,7 +19,18 @@ _ArrayofAOs=[];
 _RandomAO="";
 _AOInfo=[];
 _LookForText="zone_spawn_";
-_ArrayofAOs=[_LookForText] call BIS_fnc_getMarkers;
+// Get all markers
+private _allMarkers = allMapMarkers;
+// Loop through all markers and check if their name matches the prefix
+{
+    // Check if the marker name starts with the defined prefix
+    if ((toLower _x) find (toLower _LookForText) == 0) then {
+        _ArrayofAOs pushBack _x;
+    };
+} forEach _allMarkers;
+// Select a random marker from the list of markers
 _RandomAO=selectRandom _ArrayofAOs;
-_AOInfo=getPos _RandomAO;
+
+//Get Position of the marker
+_AOInfo=getMarkerPos _RandomAO;
 [_AOInfo,0] call core2_fnc_OBJ_TASK_SEL;

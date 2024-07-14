@@ -2,7 +2,7 @@ title = "7Cav I&A";
 author = "S3 Dev Team";
 onLoadName = "7Cav I&A";
 onLoadMission = "Arma 3 Invade N Annex";
-loadScreen = "textures\logo.paa";
+//loadScreen = "textures\logo.paa";
 
 //Default Cleanup Scripts
 corpseManagerMode = 3;
@@ -37,7 +37,7 @@ class CfgFunctions
     #include "SBGF\cfgfunctions.hpp"
     #include "VVS\Functions.h"
     #include "cScripts\CfgFunctions.hpp"
-    #include "mScripts\cfgFunctions.hpp"/
+    #include "mScripts\cfgFunctions.hpp"
     #include "core2\cfgFunctions.hpp"
 };
 
