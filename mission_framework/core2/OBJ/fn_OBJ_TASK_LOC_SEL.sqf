@@ -16,10 +16,7 @@
  */
 params ["_AOInfo", "_TaskIDs"];
 _AOSize=1500;
-_MultTaskPOS=[];
 {
 	_TaskPOS=[_AOInfo,0,_AOSize,0,0,0.1,0,[],[]] call BIS_fnc_findSafePos;
-	_TaskandPOS=[_x,_TaskPOS];
-	_MultTaskPOS pushBack _TaskandPOS;
+	[_x,_TaskPOS] call core2_fnc_OBJ_TASK_MANGER;
 }foreach _taskIDs;
-[_AOInfo,_MultTaskPOS] call core2_fnc_OBJ_TASK_MANGER;

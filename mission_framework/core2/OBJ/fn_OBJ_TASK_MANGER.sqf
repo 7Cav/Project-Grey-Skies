@@ -14,8 +14,9 @@
  * Public: No
  *
  */
-params ["_TaskID", "_TaskPOS"];
+params ["_TaskID","_TaskPOS"];
 //Gets total number of compositions
+
 _TotalNumberofComps = [_TaskID,0,1] call core2_fnc_GET_COMPS;
 _RandomNum = floor random _TotalNumberofComps;
 _Comp=[_TaskID,_RandomNum] call core2_fnc_GET_COMPS;
@@ -40,3 +41,4 @@ switch (_TaskID) do {
 	//case 'OBJ_CSAR':{};
 	//case 'OBJ_CAPTURE_AIRFIELD':{};
 }; 
+};
