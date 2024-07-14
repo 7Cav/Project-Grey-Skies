@@ -41,4 +41,3 @@ switch (_TaskID) do {
 	//case 'OBJ_CSAR':{};
 	//case 'OBJ_CAPTURE_AIRFIELD':{};
 }; 
-};

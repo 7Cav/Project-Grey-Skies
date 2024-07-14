@@ -8,7 +8,7 @@ class core2
 	class DEBUG
 	{
 		file = "core2\DEBUG";
-
+		class PRINT_SYSLOG {};
 	};
 	class MANAGERS
 	{
