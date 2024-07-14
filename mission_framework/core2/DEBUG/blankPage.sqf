@@ -1,24 +1,9 @@
-/*
- * Author: CW3.Sparrow.P
- * [Description of Function]
- *
- * Arguments:
- * [List of Arguements]
- *
- * Return Value:
- * Nothing
- *
- * Example:
- * call rScripts_fnc_tightlz_startaction
- *
- * Public: No
- *
- */
-params ["_TaskID", "_TaskPOS"];
-//Gets total number of compositions
-_TotalNumberofComps = [_TaskID,0,1] call core2_fnc_GET_COMPS;
+[[0,0,0],[["OBJ_CAPTURE_HQ",[-347.476,-615.581]],["OBJ_DESTORY_RADIO",[-1135.47,-232.414]]]]
+
+
+_TotalNumberofComps = [_TaskID,0,1] call fn_GET_COMPS;
 _RandomNum = floor random _TotalNumberofComps;
-_Comp=[_TaskID,_RandomNum] call core2_fnc_GET_COMPS;
+_Comp=[_TaskID,_RandomNum] call fn_GET_COMPS;
 
 [_TaskPOS,0,_Comp] call BIS_fnc_ObjectsMapper;
 
