@@ -31,11 +31,13 @@ class core2
 		class STRUCTURE_TRANSLATOR {};
 		//class DESERT{};
 		//class SNOW {};
-		class WOODLAND 
-		{
-			class WOODLAND_HQ {};
-			class WOODLAND_MORTAR {};
-			class WOODLAND_RADIO {};
-		};
+		
+	};
+	class WOODLAND 
+	{
+		file = "core2\STRUCTURES\WOODLAND";
+		class WOODLAND_HQ {};
+		class WOODLAND_MORTAR {};
+		class WOODLAND_RADIO {};
 	};
 };
