@@ -17,7 +17,7 @@
 params ["_Message", "_SeverityCode"];
 
 // Define the severity level
-private _SeverityLevel = 1;  // Set this to your desired severity level
+private _SeverityLevel = 3;  // Set this to your desired severity level
 
     
 if (_SeverityCode <= _SeverityLevel) then {

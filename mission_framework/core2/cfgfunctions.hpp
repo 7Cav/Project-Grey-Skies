@@ -22,6 +22,13 @@ class core2
 		class OBJ_TASK_MANGER {};
 		class OBJ_TASK_SEL {};
 	};
+	class OBJ_LOGIC_FILES
+	{
+		file = "core2\OBJ\OBJ_LOGIC_FILES";
+		class OBJ_CAPTURE_HQ_LOGIC {};
+		class OBJ_DESTROY_MORTARS_LOGIC {};
+		class OBJ_DESTROY_RADIO_LOGIC {};
+	};
 	class OPFOR
 	{
 		file = "core2\OPFOR";
