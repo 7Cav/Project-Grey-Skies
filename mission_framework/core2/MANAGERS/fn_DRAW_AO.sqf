@@ -14,7 +14,7 @@
  * Public: No
  *
  */
-params [_name, _size,_text,_loc];
+params ["_name", "_size","_text","_loc"];
 
 //_name="MainAO"; 
 //_radi=1500; 
