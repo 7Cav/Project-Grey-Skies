@@ -20,7 +20,7 @@ params ["_TaskID", ["_RandomNumber",0],["_GetNumberInArray",0]];
 GS_HQ_OBJS=call core2_fnc_WOODLAND_HQ;
 GS_RADIO_OBJS=call core2_fnc_WOODLAND_RADIO;
 GS_MORTAR_OBJS=call core2_fnc_WOODLAND_MORTAR;
-if (_GetNumberInArray==0) then {
+/*if (_GetNumberInArray==0) then {
 	switch (_TaskID) do {
 		case 'OBJ_CAPTURE_HQ':{GS_HQ_OBJS select _RandomNumber;};
 		case 'OBJ_DESTORY_RADIO':{GS_RADIO_OBJS select _RandomNumber;};
@@ -58,5 +58,5 @@ if (_GetNumberInArray==0) then {
 		//case 'OBJ_CSAR':{};
 		//case 'OBJ_CAPTURE_AIRFIELD':{};
 	}; 
-};
+};*/
 ["GET_COMPS End",1] call core2_fnc_PRINT_SYSLOG;

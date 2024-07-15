@@ -17,14 +17,9 @@
 params ["_TaskID","_TaskPOS"];
 //Gets total number of compositions
 ["OBJ_TASK_MANAGER Start",1] call core2_fnc_PRINT_SYSLOG;
-_TotalNumberofComps = [_TaskID,0,1] call core2_fnc_GET_COMPS;
-_RandomNum = floor random _TotalNumberofComps;
-_Comp=[_TaskID,_RandomNum] call core2_fnc_GET_COMPS;
-
-[_TaskPOS,0,_Comp] call BIS_fnc_ObjectsMapper;
 
 switch (_TaskID) do {
-	case 'OBJ_CAPTURE_HQ':{};
+	case 'OBJ_CAPTURE_HQ':{[_TaskPOS] call core2_fnc_OBJ_CAPTURE_HQ_LOGIC};
 	case 'OBJ_DESTORY_RADIO':{};
 	//case 'OBJ_DESTROY_SAM':{};
 	//case 'OBJ_DESTROY_ARTILLERY':{};
