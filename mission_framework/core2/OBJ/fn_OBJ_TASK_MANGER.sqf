@@ -16,7 +16,7 @@
  */
 params ["_TaskID","_TaskPOS"];
 //Gets total number of compositions
-
+["OBJ_TASK_MANAGER Start",1] call core2_fnc_PRINT_SYSLOG;
 _TotalNumberofComps = [_TaskID,0,1] call core2_fnc_GET_COMPS;
 _RandomNum = floor random _TotalNumberofComps;
 _Comp=[_TaskID,_RandomNum] call core2_fnc_GET_COMPS;
@@ -41,3 +41,4 @@ switch (_TaskID) do {
 	//case 'OBJ_CSAR':{};
 	//case 'OBJ_CAPTURE_AIRFIELD':{};
 }; 
+["OBJ_TASK_MANAGER End",1] call core2_fnc_PRINT_SYSLOG;

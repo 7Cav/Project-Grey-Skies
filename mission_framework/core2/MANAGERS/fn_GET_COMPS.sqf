@@ -12,10 +12,11 @@
  * call rScripts_fn_GET_COMPS
  *
  * Public: No
- *
+ * To Do:
+ * Should only Get Comps
  */
 params ["_TaskID", ["_RandomNumber",0],["_GetNumberInArray",0]];
-
+["GET_COMPS Start",1] call core2_fnc_PRINT_SYSLOG;
 GS_HQ_OBJS=call core2_fnc_WOODLAND_HQ;
 GS_RADIO_OBJS=call core2_fnc_WOODLAND_RADIO;
 GS_MORTAR_OBJS=call core2_fnc_WOODLAND_MORTAR;
@@ -58,3 +59,4 @@ if (_GetNumberInArray==0) then {
 		//case 'OBJ_CAPTURE_AIRFIELD':{};
 	}; 
 };
+["GET_COMPS End",1] call core2_fnc_PRINT_SYSLOG;

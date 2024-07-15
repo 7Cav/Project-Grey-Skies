@@ -36,5 +36,5 @@ _RandomAO=selectRandom _ArrayofAOs;
 //Get Position of the marker
 _AOInfo=getMarkerPos _RandomAO;
 [format["AO Location: %1",_AOInfo],2] call core2_fnc_PRINT_SYSLOG;
-[_AOInfo,0] call core2_fnc_OBJ_TASK_SEL;
 [format["AO_LOC_GET End",_AOInfo],1] call core2_fnc_PRINT_SYSLOG;
+[_AOInfo,0] call core2_fnc_OBJ_TASK_SEL;

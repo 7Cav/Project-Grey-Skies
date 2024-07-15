@@ -14,4 +14,9 @@
  * Public: No
  *
  */
+ ["WOODLAND_MORTAR Start",1] call core2_fnc_PRINT_SYSLOG;
+_data=[
 
+];
+ ["WOODLAND_MORTAR End",1] call core2_fnc_PRINT_SYSLOG;
+_data;

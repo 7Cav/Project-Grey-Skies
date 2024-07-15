@@ -14,3 +14,9 @@
  * Public: No
  *
  */
+ ["WOODLAND_RADIO Start",1] call core2_fnc_PRINT_SYSLOG;
+_data=[
+
+];
+ ["WOODLAND_RADIO End",1] call core2_fnc_PRINT_SYSLOG;
+_data;

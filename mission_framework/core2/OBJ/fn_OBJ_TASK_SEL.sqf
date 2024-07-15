@@ -15,7 +15,7 @@
  *
  */
 params ["_AOInfo", ["_NumOfTasks",0]];
-
+["OBJ_TASK_SEL Start",1] call core2_fnc_PRINT_SYSLOG;
 _TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
 //_RandomNumber = random 100;
 _MaxNumSAMSite=0;
@@ -50,6 +50,7 @@ _NumEnemyAirfield=0;
 
 for _i from 0 to _NumOfTasks do {
 	_randomNum = floor random 14;
+	[format["Random Number for Task Select : %1",_randomNum],3] call core2_fnc_PRINT_SYSLOG;
 	switch (true) do {
 		case (_randomNum==0 && _NumSAMSite<_MaxNumSAMSite):{
 			_NumSAMSite=_NumSAMSite+1;
@@ -95,5 +96,5 @@ for _i from 0 to _NumOfTasks do {
 			_TaskIDs pushBack 'OBJ_CAPTURE_AIRFIELD';};
 	};
 };
-
+["OBJ_TASK_SEL End",1] call core2_fnc_PRINT_SYSLOG;
 [_AOInfo,_TaskIDs] call core2_fnc_OBJ_TASK_LOC_SEL;
