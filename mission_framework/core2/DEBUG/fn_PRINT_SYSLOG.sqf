@@ -22,5 +22,6 @@ private _SeverityLevel = 1;  // Set this to your desired severity level
     
 if (_SeverityCode <= _SeverityLevel) then {
     systemChat _Message;
+    diag_log _Message;
 } else {};
 
