@@ -16,7 +16,7 @@
  */
  ["WOODLAND_MORTAR Start",1] call core2_fnc_PRINT_SYSLOG;
 _data=[
-
+	//Paste Result from Structure Translator Here
 ];
  ["WOODLAND_MORTAR End",1] call core2_fnc_PRINT_SYSLOG;
 _data;

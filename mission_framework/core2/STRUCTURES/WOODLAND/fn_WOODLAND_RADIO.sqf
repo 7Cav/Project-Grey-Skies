@@ -16,7 +16,7 @@
  */
  ["WOODLAND_RADIO Start",1] call core2_fnc_PRINT_SYSLOG;
 _data=[
-
+	//Paste Result from Structure Translator Here
 ];
  ["WOODLAND_RADIO End",1] call core2_fnc_PRINT_SYSLOG;
 _data;
