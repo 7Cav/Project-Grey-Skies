@@ -20,10 +20,10 @@ params ["_TaskID","_TaskPOS"];
 
 switch (_TaskID) do {
 	case 'OBJ_CAPTURE_HQ':{[_TaskPOS] call core2_fnc_OBJ_CAPTURE_HQ_LOGIC};
-	case 'OBJ_DESTORY_RADIO':{};
+	case 'OBJ_DESTORY_RADIO':{[_TaskPOS] call core2_fnc_OBJ_DESTROY_RADIO_LOGIC};
 	//case 'OBJ_DESTROY_SAM':{};
 	//case 'OBJ_DESTROY_ARTILLERY':{};
-	case 'OBJ_DESTROY_MORTARS':{};
+	case 'OBJ_DESTROY_MORTARS':{[_TaskPOS] call core2_fnc_OBJ_DESTROY_MORTARS_LOGIC};
 	//case 'OBJ_DESTROY_OBS_POST':{};
 	//case 'OBJ_DESTROY_VEC_DEPOT':{};
 	//case 'OBJ_DESTROY_FARP':{};
