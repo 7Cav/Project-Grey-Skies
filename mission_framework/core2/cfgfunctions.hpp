@@ -14,6 +14,7 @@ class core2
 	{
 		file = "core2\MANAGERS";
 		class GET_COMPS {};
+		class DRAW_AO {};
 	};
 	class OBJ
 	{

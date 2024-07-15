@@ -20,6 +20,7 @@ _ArrayofAOs=[];
 _RandomAO="";
 _AOInfo=[];
 _LookForText="zone_spawn_";
+
 // Get all markers
 private _allMarkers = allMapMarkers;
 // Loop through all markers and check if their name matches the prefix
@@ -37,4 +38,5 @@ _RandomAO=selectRandom _ArrayofAOs;
 _AOInfo=getMarkerPos _RandomAO;
 [format["AO Location: %1",_AOInfo],2] call core2_fnc_PRINT_SYSLOG;
 [format["AO_LOC_GET End",_AOInfo],1] call core2_fnc_PRINT_SYSLOG;
+["MainAO",2000,Clear the AO,_AOInfo] call core2_fnc_DRAW_AO;
 [_AOInfo,0] call core2_fnc_OBJ_TASK_SEL;
