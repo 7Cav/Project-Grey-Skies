@@ -17,8 +17,10 @@ class core2
 	};
 	class OBJ
 	{
-		file = "core2\MANAGERS";
-		class GET_COMPS {};
+		file = "core2\OBJ";
+		class OBJ_TASK_LOC_SEL {};
+		class OBJ_TASK_MANGER {};
+		class OBJ_TASK_SEL {};
 	};
 	class OPFOR
 	{
