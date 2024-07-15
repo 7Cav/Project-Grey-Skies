@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call rScripts_fn_GET_COMPS
+ * call core2_fnc_GET_COMPS
  *
  * Public: No
  * To Do:
