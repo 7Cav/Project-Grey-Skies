@@ -21,7 +21,7 @@ _TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
 //_RandomNumber = random 100;
 
 //The Max Number is determined by the number of times in the TaskList
-_TaskList = ['OBJ_DESTROY_MORTARS']
+_TaskList = ['OBJ_DESTROY_MORTARS'];
 /* Task ID list
 'OBJ_DESTROY_SAM'
 'OBJ_DESTROY_ARTILLERY'
