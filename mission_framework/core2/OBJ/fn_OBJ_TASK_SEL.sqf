@@ -20,43 +20,40 @@ params ["_AOInfo", ["_NumOfTasks",0]];
 _TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
 //_RandomNumber = random 100;
 
-//Max Number of each of objective allowed
-_MaxNumSAMSite=0;
-_MaxNumArtillery=0;
-_MaxNumMortars=0;
-_MaxNumOBSPost=0;
-_MaxNumVECDepot=0;
-_MaxNumFARP=0;
-_MaxNumSupplyDepot=0;
-_MaxNumConvoy=0;
-_MaxNumPatrolBase=0;
-_MaxNumIntel=0;
-_MaxNumOfficer=0;
-_MaxNumPOW=0;
-_MaxNumRescuePilot=0;
-_MaxNumEnemyAirfield=0;
+//The Max Number is determined by the number of times in the TaskList
+_TaskList = ['OBJ_DESTROY_MORTARS']
+/* Task ID list
+'OBJ_DESTROY_SAM'
+'OBJ_DESTROY_ARTILLERY'
+'OBJ_DESTROY_MORTARS'
+'OBJ_DESTROY_OBS_POST'
+'OBJ_DESTROY_VEC_DEPOT'
+'OBJ_DESTROY_FARP'
+'OBJ_DESTROY_SUPPLY_DEPOT'
+'OBJ_DESTROY_CONVOY'
+'OBJ_DESTROY_PATROL_BASE'
+'OBJ_COLLECT_INTEL'
+'OBJ_KILL_OFF'
+'OBJ_RESCUE_POW'
+'OBJ_CSAR'
+'OBJ_CAPTURE_AIRFIELD'
+'OBJ_CAPTURE_CHECKPOINT'
+'OBJ_DESTROY_LRP'
+*/
+//Place into a the TaskIDs then pop it out of the Task list, the Max Number is determined by the number of times in the TaskList
 
-//Tracking the number of each objective added
-_NumSAMSite=0;
-_NumArtillery=0;
-_NumMortars=0;
-_NumOBSPost=0;
-_NumVECDepot=0;
-_NumFARP=0;
-_NumSupplyDepot=0;
-_NumConvoy=0;
-_NumPatrolBase=0;
-_NumIntel=0;
-_NumOfficer=0;
-_NumPOW=0;
-_NumRescuePilot=0;
-_NumEnemyAirfield=0;
-
-
+for _i from 0 to _NumOfTasks do {
+	_RandomNum=0;
+	_TotalNumberofTasks = count _TaskList;
+	_RandomNum = floor random _TotalNumberofTasks;
+	_TaskID = _TaskList select _RandomNum;
+	_TaskIDs pushBack _TaskID;
+	_TaskList deleteAt _RandomNum;
+};
 /* Need to rework this next session.
 Idea: Rework to just add stuff to the TaskID array first then clean it up after based on the metrics above
 */
-for _i from 0 to _NumOfTasks do {
+/*for _i from 0 to _NumOfTasks do {
 	_randomNum = floor random 14;
 	[format["Random Number for Task Select : %1",_randomNum],3] call core2_fnc_PRINT_SYSLOG;
 	switch (true) do {
@@ -103,7 +100,7 @@ for _i from 0 to _NumOfTasks do {
 			_NumEnemyAirfield=_NumEnemyAirfield+1;
 			_TaskIDs pushBack 'OBJ_CAPTURE_AIRFIELD';};
 	};
-};
+};*/
 [format["Task IDs: %1",_TaskIDs],2] call core2_fnc_PRINT_SYSLOG;
 ["OBJ_TASK_SEL End",1] call core2_fnc_PRINT_SYSLOG;
 [_AOInfo,_TaskIDs] call core2_fnc_OBJ_TASK_LOC_SEL;

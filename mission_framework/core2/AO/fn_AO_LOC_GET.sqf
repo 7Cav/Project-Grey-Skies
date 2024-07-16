@@ -42,4 +42,4 @@ _AOInfo=getMarkerPos _RandomAO;
 
 ["MainAO",2000,"Clear the AO",_AOInfo] call core2_fnc_DRAW_AO;
 
-[_AOInfo,0] call core2_fnc_OBJ_TASK_SEL;
+[_AOInfo,1] call core2_fnc_OBJ_TASK_SEL;
