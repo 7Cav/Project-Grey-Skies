@@ -1,15 +1,16 @@
 /*
  * Author: CW3.Sparrow.P
- * [Description of Function]
+ * Finds the Location to place each Task/Objective, and calls the task Manager for each one
  *
  * Arguments:
- * [List of Arguements]
+ * 0: AOInfo - Location of the AO 
+ * 1: TaskIDs - List of TaskIDs to determine what each objective is for the AO
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * call rScripts_fnc_tightlz_startaction
+ * [_AOInfo,_TaskIDs] call core2_fnc_OBJ_TASK_LOC_SEL
  *
  * Public: No
  *

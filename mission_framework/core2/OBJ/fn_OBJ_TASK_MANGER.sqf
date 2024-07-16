@@ -1,21 +1,21 @@
 /*
  * Author: CW3.Sparrow.P
- * [Description of Function]
+ * Kicks off the corresponding Logic file for each objective
  *
  * Arguments:
- * [List of Arguements]
+ * 0: TaskID - Individual Task ID
+ * 1: TaskPos - Location to place the Task at
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * call rScripts_fnc_tightlz_startaction
+ * [_TaskID,_TaskPOS] call core2_fnc_OBJ_TASK_MANGER
  *
  * Public: No
  *
  */
 params ["_TaskID","_TaskPOS"];
-//Gets total number of compositions
 ["OBJ_TASK_MANAGER Start",1] call core2_fnc_PRINT_SYSLOG;
 
 switch (_TaskID) do {

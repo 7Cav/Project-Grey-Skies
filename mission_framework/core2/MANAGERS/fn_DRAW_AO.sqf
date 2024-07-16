@@ -1,10 +1,13 @@
 /*
  * Author: 7th Cav Dev Team, Sparrow
- * [Description of Function]
+ * Draws a circle on the Map to mark the AO
  *
  * Arguments:
- * [List of Arguements]
- *
+ * 0: name - Name of the Marker
+ * 1: size - Size of the Marker 
+ * 2: text - Text associated with AO
+ * 3: loc - Location to place the marker
+ * 
  * Return Value:
  * Nothing
  *

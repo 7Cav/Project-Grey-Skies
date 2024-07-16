@@ -3,21 +3,24 @@
  * Determines the number and types of objectives for the AO
  *
  * Arguments:
- * [List of Arguements]
- *
+ * 0: AOInfo - Location of the AO
+ * 1: NumOfTasks - Number of tasks to add
  * Return Value:
  * Nothing
  *
  * Example:
- * call rScripts_fnc_tightlz_startaction
+ * [_AOInfo, _NumOfTasks] call core2_fnc_OBJ_TASK_SEL
  *
  * Public: No
- *
+ * To Do:
+ * Revaluate how this is done
  */
 params ["_AOInfo", ["_NumOfTasks",0]];
 ["OBJ_TASK_SEL Start",1] call core2_fnc_PRINT_SYSLOG;
 _TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
 //_RandomNumber = random 100;
+
+//Max Number of each of objective allowed
 _MaxNumSAMSite=0;
 _MaxNumArtillery=0;
 _MaxNumMortars=0;
@@ -33,6 +36,7 @@ _MaxNumPOW=0;
 _MaxNumRescuePilot=0;
 _MaxNumEnemyAirfield=0;
 
+//Tracking the number of each objective added
 _NumSAMSite=0;
 _NumArtillery=0;
 _NumMortars=0;
@@ -48,6 +52,10 @@ _NumPOW=0;
 _NumRescuePilot=0;
 _NumEnemyAirfield=0;
 
+
+/* Need to rework this next session.
+Idea: Rework to just add stuff to the TaskID array first then clean it up after based on the metrics above
+*/
 for _i from 0 to _NumOfTasks do {
 	_randomNum = floor random 14;
 	[format["Random Number for Task Select : %1",_randomNum],3] call core2_fnc_PRINT_SYSLOG;
@@ -96,5 +104,6 @@ for _i from 0 to _NumOfTasks do {
 			_TaskIDs pushBack 'OBJ_CAPTURE_AIRFIELD';};
 	};
 };
+[format["Task IDs: %1",_TaskIDs],2] call core2_fnc_PRINT_SYSLOG;
 ["OBJ_TASK_SEL End",1] call core2_fnc_PRINT_SYSLOG;
 [_AOInfo,_TaskIDs] call core2_fnc_OBJ_TASK_LOC_SEL;

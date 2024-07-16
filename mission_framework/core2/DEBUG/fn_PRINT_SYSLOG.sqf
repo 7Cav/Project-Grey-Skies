@@ -19,7 +19,8 @@ params ["_Message", "_SeverityCode"];
 // Define the severity level
 private _SeverityLevel = 3;  // Set this to your desired severity level
 
-    
+//If the Severity Code of the message is less than or equal to the Severity 
+//Level it will print out and document that in the system chat and the rpt log  
 if (_SeverityCode <= _SeverityLevel) then {
     systemChat _Message;
     diag_log _Message;

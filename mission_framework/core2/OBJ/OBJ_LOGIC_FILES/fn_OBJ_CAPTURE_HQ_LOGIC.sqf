@@ -1,9 +1,9 @@
 /*
  * Author: 7th Cav Dev Team, Sparrow
- * [Description of Function]
+ * Builds out the Capture HQ Objective
  *
  * Arguments:
- * [List of Arguements]
+ * 0: TaskPos - Position of Objective
  *
  * Return Value:
  * Nothing

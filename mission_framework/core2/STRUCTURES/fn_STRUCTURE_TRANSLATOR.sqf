@@ -1,7 +1,8 @@
 /*
  * Author: CW3.Sparrow.P
  * Compiles an array of Object and OPFOR locations for the Structures storage file, Currently just gets the output of BIS_fnc_ObjectsGrabber
- *
+ * Is meant to be copy and pasted into the debug script prompt
+ * 
  * Arguments:
  * [List of Arguements]
  *

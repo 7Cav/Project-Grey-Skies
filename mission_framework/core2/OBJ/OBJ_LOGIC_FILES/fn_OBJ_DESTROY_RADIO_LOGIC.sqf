@@ -1,15 +1,15 @@
 /*
  * Author: 7th Cav Dev Team, Sparrow
- * [Description of Function]
+ * Builds out the Destroy Radio Tower Objective
  *
  * Arguments:
- * [List of Arguements]
+ * 0: TaskPos - Position of Objective
  *
  * Return Value:
  * Nothing
  *
  * Example:
- * [_TaskPOS] call core2_fnc_OBJ_CAPTURE_HQ_LOGIC
+ * [_TaskPOS] call core2_fnc_OBJ_DESTROY_RADIO_LOGIC
  *
  * Public: No
  *

@@ -1,15 +1,15 @@
 /*
  * Author: CW3.Sparrow.P
- * [Description of Function]
+ * Returns an array of arrays into a global variable to store how the locations are to be built for the objective
  *
  * Arguments:
- * [List of Arguements]
+ * N/A
  *
  * Return Value:
- * Nothing
+ * 0: data - An Array of compositions
  *
  * Example:
- * call rScripts_fnc_tightlz_startaction
+ * call core2_fnc_WOODLAND_RADIO
  *
  * Public: No
  *
