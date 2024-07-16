@@ -41,14 +41,16 @@ _TaskList = ['OBJ_DESTROY_MORTARS'];
 'OBJ_DESTROY_LRP'
 */
 //Place into a the TaskIDs then pop it out of the Task list, the Max Number is determined by the number of times in the TaskList
-
-for _i from 0 to _NumOfTasks do {
+_i=0;
+while {_i<_NumOfTasks} do {
 	_RandomNum=0;
 	_TotalNumberofTasks = count _TaskList;
 	_RandomNum = floor random _TotalNumberofTasks;
 	_TaskID = _TaskList select _RandomNum;
 	_TaskIDs pushBack _TaskID;
 	_TaskList deleteAt _RandomNum;
+	_i=_i+1;
+	[format["Task IDs: %1, Random Number: %2, Iteration: %3",_TaskID,_RandomNum,_i],3] call core2_fnc_PRINT_SYSLOG;
 };
 /* Need to rework this next session.
 Idea: Rework to just add stuff to the TaskID array first then clean it up after based on the metrics above
