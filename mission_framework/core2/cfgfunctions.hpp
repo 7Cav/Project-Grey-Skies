@@ -39,8 +39,7 @@ class core2
 	{
 		file = "core2\STRUCTURES";
 		class STRUCTURE_TRANSLATOR {};
-		//class DESERT{};
-		//class SNOW {};
+		class STRUCTURE_BUILDER {};
 		
 	};
 	class WOODLAND 
