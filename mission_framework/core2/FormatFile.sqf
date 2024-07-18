@@ -1,5 +1,5 @@
 /*
- * Author: CW3.Sparrow.P
+ * Author: 7th Cav Dev Team, Sparrow
  * [Description of Function]
  *
  * Arguments:
