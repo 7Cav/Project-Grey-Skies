@@ -51,10 +51,10 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 	},
 	{// codeCompleted
 		params HOLDACTION_PARAMS;
-		_arguments params ["_childTaskID"];
+		_arguments params ["_taskID"];
 		_flag setVariable ["TER_flagSide",side _caller];
 		[] call (_arguments select 0);
-		_taskID=_arguments select 0;
+
 		[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 	},
 	{//codeInterrupted
@@ -64,7 +64,7 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 		_side = _flag getVariable ["TER_flagSide",civilian];
 		_flag setFlagTexture OWN_FLAG(_side);
 	},
-[{}], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
+[_childTaskID], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
 
 _addID;
 ["CAPTURE_FLAG END",1] call core2_fnc_PRINT_SYSLOG;
