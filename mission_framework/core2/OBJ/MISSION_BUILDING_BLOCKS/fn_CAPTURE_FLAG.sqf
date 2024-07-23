@@ -53,6 +53,8 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 		params HOLDACTION_PARAMS;
 		_flag setVariable ["TER_flagSide",side _caller];
 		[] call (_arguments select 0);
+		_taskID=_arguments select 2;
+		[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 	},
 	{//codeInterrupted
 		//revert
