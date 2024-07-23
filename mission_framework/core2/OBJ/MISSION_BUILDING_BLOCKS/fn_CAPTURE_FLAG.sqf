@@ -16,7 +16,7 @@
 	[this,{hint "Capped";}] call TAG_fncName;
 */
 ["CAPTURE_FLAG Start",1] call core2_fnc_PRINT_SYSLOG;
-params ["_flag",_parentTaskID,_childTaskID];
+params ["_flag","_parentTaskID","_childTaskID"];
 #define FLAG_PATH(TEXTURE) (format ["\a3\data_f\flags\%1.paa",TEXTURE])
 #define NATO_FLAG FLAG_PATH("flag_nato_co")
 #define CSAT_FLAG FLAG_PATH("flag_csat_co")
