@@ -18,7 +18,7 @@
 ["CAPTURE_FLAG Start",1] call core2_fnc_PRINT_SYSLOG;
 params ["_flag","_parentTaskID","_childTaskID"];
 //#define FLAG_PATH(TEXTURE) (format ["\a3\data_f\flags\flag_csat_co.paa",TEXTURE])
-#define NATO_FLAG "\textures\7CAV_LOGO_00.paa"
+#define NATO_FLAG "\a3\data_f\flags\flag_nato_co.paa"
 #define CSAT_FLAG "\a3\data_f\flags\flag_csat_co.paa"
 //#define AAF_FLAG FLAG_PATH("flag_aaf_co")
 //#define EMPTY_FLAG FLAG_PATH("flag_white_co")
