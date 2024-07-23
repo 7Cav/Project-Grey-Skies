@@ -30,6 +30,11 @@ class core2
 		class OBJ_DESTROY_MORTARS_LOGIC {};
 		class OBJ_DESTROY_RADIO_LOGIC {};
 	};
+	class MISSION_BUILDING_BLOCKS
+	{
+		file = "core2\OBJ\MISSION_BUILDING_BLOCKS";
+		class CAPTURE_FLAG{};
+	};
 	class OPFOR
 	{
 		file = "core2\OPFOR";
