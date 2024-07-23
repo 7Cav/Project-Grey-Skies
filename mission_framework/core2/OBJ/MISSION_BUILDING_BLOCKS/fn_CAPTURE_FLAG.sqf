@@ -31,7 +31,7 @@ params ["_flag","_parentTaskID","_childTaskID"];
 
 _flag setflagAnimationPhase 1;
 _flag setFlagTexture CSAT_FLAG;
-_flag setVariable ["TER_flagSide",civilian];
+//_flag setVariable ["TER_flagSide",civilian];
 _icon = "\a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff2_ca.paa";
 _duration = 10;
 
@@ -46,7 +46,7 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 		if (_relProgress < 0.5) then {
 			_flag setFlagAnimationPhase (1-(2*_relProgress));
 		} else {
-			if (_relProgress == 0.5) then {_flag setFlagTexture "\a3\data_f\flags\flag_nato_co.paa"};
+			if (_relProgress == 0.5) then {_flag setFlagTexture NATO_FLAG};
 			_flag setFlagAnimationPhase ((2*_relProgress)-1);
 		};
 	},
