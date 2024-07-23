@@ -15,7 +15,8 @@
 	[this] call TAG_fncName;
 	[this,{hint "Capped";}] call TAG_fncName;
 */
-
+["CAPTURE_FLAG Start",1] call core2_fnc_PRINT_SYSLOG;
+params ["_flag",_parentTaskID,_childTaskID];
 #define FLAG_PATH(TEXTURE) (format ["\a3\data_f\flags\%1.paa",TEXTURE])
 #define NATO_FLAG FLAG_PATH("flag_nato_co")
 #define CSAT_FLAG FLAG_PATH("flag_csat_co")
@@ -25,7 +26,9 @@
 #define FLAG_ARRAY [NATO_FLAG,CSAT_FLAG,AAF_FLAG,EMPTY_FLAG]
 #define SIDE_ARRAY [west,east,independent,civilian]
 #define OWN_FLAG(ARG_SIDE) (FLAG_ARRAY select (SIDE_ARRAY find ARG_SIDE))
-params ["_flag",["_afterCommand",{}]];
+
+[west, [_childTaskID, _parentTaskID], ["Capture the Enemy Flag", "Capture the flag.", "cookiemarker2"], objNull, 1, 3, false] call BIS_fnc_taskCreate;
+
 _flag setflagAnimationPhase 1;
 _flag setFlagTexture EMPTY_FLAG;
 _flag setVariable ["TER_flagSide",civilian];
@@ -58,6 +61,7 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 		_side = _flag getVariable ["TER_flagSide",civilian];
 		_flag setFlagTexture OWN_FLAG(_side);
 	},
-[_afterCommand], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
+[{}], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
 
 _addID
+["CAPTURE_FLAG END",1] call core2_fnc_PRINT_SYSLOG;
