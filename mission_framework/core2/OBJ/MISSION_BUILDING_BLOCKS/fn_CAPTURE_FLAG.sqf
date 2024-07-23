@@ -1,5 +1,6 @@
 /*
-	Author: 7erra
+	Modified by: 7Cav Dev Team, Sparrow.P
+	Original Author: 7erra
 
 	Description:
 	 Makes a flag pole capturable
