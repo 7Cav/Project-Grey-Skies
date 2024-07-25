@@ -14,7 +14,7 @@
  * Public: No
  *
  */
-[] call compileFinal preprocessFileLineNumbers "GS_preset_config.sqf";
-[] call compileFinal preprocessFileLineNumbers "GS_config.sqf";
+[] call compileFinal preprocessFileLineNumbers "core2\GS_preset_config.sqf";
+[] call compileFinal preprocessFileLineNumbers "core2\GS_config.sqf";
 call core2_fnc_GET_COMPS;
 call core2_fnc_init_preset;
