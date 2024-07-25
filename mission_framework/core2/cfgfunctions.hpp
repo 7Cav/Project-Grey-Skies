@@ -1,5 +1,11 @@
 class core2
 {
+	class INIT
+	{
+		file = "core2"
+		class init_core2 {};
+		class init_preset {};
+	}
 	class AO
 	{
 		file = "core2\AO";
@@ -37,8 +43,8 @@ class core2
 	};
 	class OPFOR
 	{
-		file = "core2\OPFOR";
-		
+		file = "core2\OPFOR\SPAWNERS";
+		class SINGLE_UNIT_SPAWN {};
 	};
 	class STRUCTURES
 	{
