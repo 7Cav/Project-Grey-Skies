@@ -8,8 +8,10 @@ if (!isDedicated) then {
 
 };
 
-if (isDedicated || isMultiplayer) then {
 
+
+if (isDedicated || isMultiplayer) then {
+	call core2_fnc_init_core2;
 
 
 };
