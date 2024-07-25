@@ -21,13 +21,12 @@ params ["_flag","_parentTaskID","_childTaskID"];
 
 //Need to convert to global variables in setting file
 #define NATO_FLAG "\a3\data_f\flags\flag_nato_co.paa"
-#define CSAT_FLAG "\a3\data_f\flags\flag_csat_co.paa"
 
 
 [west, [_childTaskID, _parentTaskID], ["Capture the Enemy Flag", "Capture the flag.", "cookiemarker2"], objNull, 1, 3, false] call BIS_fnc_taskCreate;
 
 _flag setflagAnimationPhase 1;
-_flag setFlagTexture CSAT_FLAG;
+_flag setFlagTexture rf_flag;
 _icon = "\a3\ui_f\data\igui\cfg\holdactions\holdaction_takeoff2_ca.paa";
 _duration = 10;
 
@@ -55,7 +54,7 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 		//revert
 		params ["_flag", "_caller", "_actionId", "_arguments"];
 		_flag setFlagAnimationPhase 1;
-		_flag setFlagTexture CSAT_FLAG;
+		_flag setFlagTexture rf_flag;
 	},
 [_childTaskID], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
 
