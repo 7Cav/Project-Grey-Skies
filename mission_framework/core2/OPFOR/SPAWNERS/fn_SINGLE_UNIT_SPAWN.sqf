@@ -20,7 +20,7 @@ params ["_UnitToSpawn", "_position"];
 private _group = createGroup EAST; 
 
 // Spawn the unit
-private _unit = _group createUnit [_UnitToSpawn, _position, [], 33, "NONE"]; // "B_Soldier_F" is the class name for a NATO rifleman
+private _unit = _group createUnit [_UnitToSpawn, _position, [], 5, "NONE"]; // "B_Soldier_F" is the class name for a NATO rifleman
 
 _array=[_unit,_group];
 
