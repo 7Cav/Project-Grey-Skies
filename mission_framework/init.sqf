@@ -4,7 +4,7 @@
 
 if (!isDedicated) then {
 
-	[] spawn mScripts_fnc_initializePlayer;
+	//[] spawn mScripts_fnc_initializePlayer;
 
 };
 
