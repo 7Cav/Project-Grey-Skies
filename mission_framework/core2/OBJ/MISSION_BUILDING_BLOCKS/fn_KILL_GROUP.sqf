@@ -20,10 +20,13 @@ params ["_group","_parentTaskID","_childTaskID"];
 
 _Events=["Empty","Deleted"];
 
+_group setVariable ["_taskID",_childTaskID];
+
 {
 	_group addEventHandler [_x, {
-		params ["_group","_childTaskID"];
-		[_childTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
+		params ["_group"];
+		_taskID=_group getVariable "_taskID";
+		[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 	}];
 }foreach _Events;
 
