@@ -9,14 +9,14 @@
  * Nothing
  *
  * Example:
- * [_group,"OBJ_CAPTURE_HQ","HQ_OFFICER"] call core2_fnc_KILL_GROUP
+ * [_group,"OBJ_CAPTURE_HQ","HQ_OFFICER","Kill the Enemy Officer", "Kill the Officer"] call core2_fnc_KILL_GROUP
  *
  * Public: No
  *
  */
-params ["_group","_parentTaskID","_childTaskID"];
+params ["_group","_parentTaskID","_childTaskID","_TaskDescription","_TaskName"];
 
-[west, [_childTaskID, _parentTaskID], ["Kill the Enemy Officer", "Kill the Officer", "cookiemarker2"], objNull, 1, 3, false] call BIS_fnc_taskCreate;
+[west, [_childTaskID, _parentTaskID], [_TaskDescription, _TaskName, "cookiemarker2"], objNull, 1, 3, false] call BIS_fnc_taskCreate;
 
 _Events=["Empty","Deleted"];
 

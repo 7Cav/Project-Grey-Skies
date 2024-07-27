@@ -30,7 +30,7 @@ _groupUnitArray=[rf_officer,_TaskPOS] call core2_fnc_SINGLE_UNIT_SPAWN;
 _unit = _groupUnitArray select 0;
 _group = _groupUnitArray select 1;
 
-[_group,"OBJ_CAPTURE_HQ","HQ_OFFICER"] call core2_fnc_KILL_GROUP;
+[_group,"OBJ_CAPTURE_HQ","HQ_OFFICER","Kill the Enemy Officer", "Kill the Officer"] call core2_fnc_KILL_GROUP
 
 //Collect Intel
 
