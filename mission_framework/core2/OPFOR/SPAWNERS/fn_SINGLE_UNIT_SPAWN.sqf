@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call rScripts_fnc_tightlz_startaction
+ * [rf_officer,_position] call core2_fnc_SINGLE_UNIT_SPAWN;
  *
  * Public: No
  *
@@ -22,5 +22,6 @@ private _group = createGroup EAST;
 // Spawn the unit
 private _unit = _group createUnit [_UnitToSpawn, _position, [], 33, "NONE"]; // "B_Soldier_F" is the class name for a NATO rifleman
 
-_unit;
+_array=[_unit,_group];
 
+_array;

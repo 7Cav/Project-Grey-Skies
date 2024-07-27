@@ -40,6 +40,7 @@ class core2
 	{
 		file = "core2\OBJ\MISSION_BUILDING_BLOCKS";
 		class CAPTURE_FLAG{};
+		class KILL_GROUP{};
 	};
 	class OPFOR
 	{
