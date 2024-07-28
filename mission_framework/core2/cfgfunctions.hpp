@@ -1,5 +1,11 @@
 class core2
 {
+	class INIT
+	{
+		file = "core2"
+		class init_core2 {};
+		class init_preset {};
+	}
 	class AO
 	{
 		file = "core2\AO";
@@ -34,11 +40,12 @@ class core2
 	{
 		file = "core2\OBJ\MISSION_BUILDING_BLOCKS";
 		class CAPTURE_FLAG{};
+		class KILL_GROUP{};
 	};
 	class OPFOR
 	{
-		file = "core2\OPFOR";
-		
+		file = "core2\OPFOR\SPAWNERS";
+		class SINGLE_UNIT_SPAWN {};
 	};
 	class STRUCTURES
 	{
