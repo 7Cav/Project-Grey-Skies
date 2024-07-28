@@ -17,7 +17,7 @@
 	[this,{hint "Capped";}] call TAG_fncName;
 */
 ["HACK_INTEL Start",1] call core2_fnc_PRINT_SYSLOG;
-params ["_flag","_parentTaskID","_childTaskID"];
+params ["_laptop","_parentTaskID","_childTaskID"];
 
 //Need to convert to global variables in setting file
 #define NATO_FLAG "\a3\data_f\flags\flag_nato_co.paa"
@@ -27,24 +27,24 @@ params ["_flag","_parentTaskID","_childTaskID"];
 
 _icon = "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa";
 _duration = 10;
-random
-_addID = [mylaptop, "Hack Terminal", _icon, _icon,
+
+_addID = [_laptop, "Hack Terminal", _icon, _icon,
 	"true",//condition show
 	"true",
 	{//code start
 	},
 	{// code progress -> set flag height
-		params ["_flag", "_caller", "_actionId", "_arguments","_progress", "_maxProgress"];
+		params ["_laptop", "_caller", "_actionId", "_arguments","_progress", "_maxProgress"];
 		
 	},
 	{// codeCompleted
-		params ["_flag", "_caller", "_actionId", "_arguments"];
+		params ["_laptop", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_taskID"];
 		[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 	},
 	{//codeInterrupted
 		//revert
-		params ["_flag", "_caller", "_actionId", "_arguments"];
+		params ["_laptop", "_caller", "_actionId", "_arguments"];
 
 	},
 [_childTaskID], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
