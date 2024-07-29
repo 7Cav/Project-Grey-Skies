@@ -7,6 +7,7 @@
        
 
 */
+rf_flag ="\UK3CB_Factions\addons\UK3CB_Factions_KDF\Flag\KDF_flag_co.paa"
 // OPFOR Infantry - General
 rf_rifleman =                 "UK3CB_KDF_O_RIF_1";
 rf_autorifleman =             "UK3CB_KDF_O_AR";
@@ -147,4 +148,28 @@ rf_hq_team = [
    rf_officer_staff,
    rf_radioman
 
+];
+
+rf_sniper_team = [
+   rf_sniper,
+   rf_spotter
+];
+
+rf_sf_squad = [
+   rf_sf_sl,
+   rf_sf_tl,
+   rf_sf_autorifleman,
+   rf_sf_lat,
+   rf_sf_grenadier,
+   rf_sf_tl,
+   rf_sf_autorifleman,
+   rf_sf_lat,
+   rf_sf_cls
+];
+
+rf_fireteam = [
+   rf_sf_tl,
+   rf_sf_autorifleman,
+   rf_sf_lat,
+   rf_sf_grenadie
 ];
