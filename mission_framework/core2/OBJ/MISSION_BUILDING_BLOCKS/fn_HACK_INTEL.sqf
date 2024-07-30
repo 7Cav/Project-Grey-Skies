@@ -1,9 +1,11 @@
 /*
 	Modified by: 7Cav Dev Team, Sparrow.P
-	Original Author: 7erra
+	
 
 	Description:
-	 Makes a flag pole capturable
+	 Adds action to laptop to plugin USB, after a certain duration (15 seconds) an action is made available to unplug usb
+	 This triggers a QRF force to spawn and deal with anyone in the objective. If Objective is abandoned (killed players, retreat, etc...)
+	 this resets the objective (no players within 100m)
 
 	Parameter(s):
 	 0: OBJECT - Flag
@@ -20,34 +22,35 @@
 params ["_laptop","_parentTaskID","_childTaskID"];
 
 //Need to convert to global variables in setting file
-#define NATO_FLAG "\a3\data_f\flags\flag_nato_co.paa"
+_duration=15;
+[west, [_childTaskID, _parentTaskID], ["Hack the Enemy Intel", "Hack the Intel", "cookiemarker2"], objNull, 1, 3, false] call BIS_fnc_taskCreate;
 
 
-[west, [_childTaskID, _parentTaskID], ["Hack the Enemy Intel", "Capture the flag.", "cookiemarker2"], objNull, 1, 3, false] call BIS_fnc_taskCreate;
+_duration = 15;
 
-_icon = "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa";
-_duration = 10;
+_laptop setVariable ["_USBComplete","false"];
 
-_addID = [_laptop, "Hack Terminal", _icon, _icon,
-	"true",//condition show
-	"true",
-	{//code start
-	},
-	{// code progress -> set flag height
-		params ["_laptop", "_caller", "_actionId", "_arguments","_progress", "_maxProgress"];
-		
-	},
-	{// codeCompleted
-		params ["_laptop", "_caller", "_actionId", "_arguments"];
-		_arguments params ["_taskID"];
-		[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
-	},
-	{//codeInterrupted
-		//revert
-		params ["_laptop", "_caller", "_actionId", "_arguments"];
+_laptop addAction ["Plug USB into Laptop",
+{params ["_target", "_caller", "_actionId", "_arguments"];
+	_arguments params ["_laptop","_duration"];
+	_trg=createTrigger["EmptyDetector",getPos _laptop];
+	_trg setTriggerArea[50,50,0,false,20];
+	_trg setTriggerActivation["ANYPLAYER","PRESENT",true];
+	_trg setTriggerStatements 
+	[
+		"this",
+		"_laptop setVariable ['_USBComplete','false']",
+		""
+	];
+	_trg setTriggerTimeout [_duration_duration,_duration,true];
+},[_laptop,_duration],1.5,true,true,"!(_target getVariable['_USBComplete'])",
+];
 
-	},
-[_childTaskID], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
+_laptop addAction ["Take USB from Laptop",
+{params ["_target", "_caller", "_actionId", "_arguments"];
+	_arguments params ["_taskID"];
+	[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
+},[_childTaskID],1.5,true,true,"(_target getVariable['_USBComplete'])",
+];
 
-_addID;
 ["HACK_END END",1] call core2_fnc_PRINT_SYSLOG;
