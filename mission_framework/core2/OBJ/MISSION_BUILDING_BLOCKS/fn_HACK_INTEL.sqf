@@ -29,21 +29,24 @@ _duration=15;
 _duration = 15;
 
 _laptop setVariable ["_USBComplete","false"];
+_laptop setVariable ["_USBStarted","false"]
 
 _laptop addAction ["Plug USB into Laptop",
 {params ["_target", "_caller", "_actionId", "_arguments"];
 	_arguments params ["_laptop","_duration"];
 	_trg=createTrigger["EmptyDetector",getPos _laptop];
 	_trg setTriggerArea[50,50,0,false,20];
-	_trg setTriggerActivation["ANYPLAYER","PRESENT",true];
+	_trg setTriggerActivation["ANYPLAYER","PRESENT",false];
 	_trg setTriggerStatements 
 	[
 		"this",
-		"_laptop setVariable ['_USBComplete','false']",
-		""
+		"_laptop setVariable ['_USBComplete','true']; [west,'HQ'] sideChat 'Download Complete. Grab the USB';",
+		"_laptop setVariable ['_USBComplete','false'];_laptop setVariable ['_USBStarted','false'];"
 	];
-	_trg setTriggerTimeout [_duration_duration,_duration,true];
-},[_laptop,_duration],1.5,true,true,"!(_target getVariable['_USBComplete'])",
+	_trg setTriggerTimeout [_duration,_duration,_duration,true];
+	_laptop setVariable ['_USBStarted','true'];
+	[west,"HQ"] sideChat "Download in progress";
+},[_laptop,_duration],1.5,true,true,"!(_target getVariable['_USBComplete']) && !(_target getVariable['_USBStarted'])",
 ];
 
 _laptop addAction ["Take USB from Laptop",
@@ -52,5 +55,5 @@ _laptop addAction ["Take USB from Laptop",
 	[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 },[_childTaskID],1.5,true,true,"(_target getVariable['_USBComplete'])",
 ];
-
+setVariable
 ["HACK_END END",1] call core2_fnc_PRINT_SYSLOG;
