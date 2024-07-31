@@ -40,8 +40,8 @@ _laptop addAction ["Plug USB into Laptop",
 	_trg setTriggerStatements 
 	[
 		"this",
-		"_laptop setVariable ['_USBComplete','true']; [west,'HQ'] sideChat 'Download Complete. Grab the USB';",
-		"_laptop setVariable ['_USBComplete','false'];_laptop setVariable ['_USBStarted','false'];"
+		"_laptop setVariable ['_USBComplete','true']; [west,'HQ'] sideChat 'Download Complete. Grab the USB'; ",
+		"_laptop setVariable ['_USBComplete','false'];_laptop setVariable ['_USBStarted','false']; deleteVehicle thisTrigger;"
 	];
 	_trg setTriggerTimeout [_duration,_duration,_duration,true];
 	_laptop setVariable ['_USBStarted','true'];
@@ -55,5 +55,5 @@ _laptop addAction ["Take USB from Laptop",
 	[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 },[_childTaskID],1.5,true,true,"(_target getVariable['_USBComplete'])",
 ];
-setVariable
+
 ["HACK_END END",1] call core2_fnc_PRINT_SYSLOG;
