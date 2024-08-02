@@ -39,8 +39,9 @@ class core2
 	class MISSION_BUILDING_BLOCKS
 	{
 		file = "core2\OBJ\MISSION_BUILDING_BLOCKS";
-		class CAPTURE_FLAG{};
-		class KILL_GROUP{};
+		class CAPTURE_FLAG {};
+		class KILL_GROUP {};
+		class DESTROY_OBJECT {};
 	};
 	class OPFOR
 	{
