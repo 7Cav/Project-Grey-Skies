@@ -58,5 +58,7 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 	},
 [_childTaskID], _duration, 1.5, true] call BIS_fnc_holdActionAdd;
 
-_addID;
+//_addID;
 ["CAPTURE_FLAG END",1] call core2_fnc_PRINT_SYSLOG;
+
+[_childTaskID,_flag] append GS_Protected_Object;

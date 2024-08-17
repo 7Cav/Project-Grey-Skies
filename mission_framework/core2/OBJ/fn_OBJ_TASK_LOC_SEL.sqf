@@ -23,4 +23,7 @@ _AOSize=1500;
 	[_x,_TaskPOS] call core2_fnc_OBJ_TASK_MANGER;
 	[format["Task ID: %1, Task Position: %2",_x,_TaskPOS],3] call core2_fnc_PRINT_SYSLOG;
 }foreach _taskIDs;
+
+call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
+
 ["OBJ_TASK_LOC_SEL End",1] call core2_fnc_PRINT_SYSLOG;
