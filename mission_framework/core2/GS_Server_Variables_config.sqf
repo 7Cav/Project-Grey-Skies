@@ -17,3 +17,4 @@
 
 GS_FrameHandlerDelay=30;
 GS_ProtectedObject=[];
+GS_OBJArray=[];

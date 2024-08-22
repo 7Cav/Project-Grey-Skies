@@ -30,3 +30,4 @@ _group setVariable ["_taskID",_childTaskID];
 	}];
 }foreach _Events;
 
+[_childTaskID,_group] append GS_Protected_Object;
