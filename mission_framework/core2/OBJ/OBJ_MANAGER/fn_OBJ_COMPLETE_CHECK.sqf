@@ -16,6 +16,7 @@
  *
  */
 
+
 _function={{
 	_ParentTaskID= _x select 0;
 	_ChildTaskIDs = _x select 1;
@@ -32,8 +33,8 @@ _function={{
 		[_ParentTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 	};
 	  
-} forEach GS_ProtectedObject;};
+} forEach GS_OBJArray;};
 
 _exitCondition={count GS_OBJArray ==0;};
 
-[_function,GS_FrameHandlerDelay,[],{},{},true,_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
+[_function,GS_FrameHandlerDelay,[],{},{},{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;

@@ -26,6 +26,6 @@ _function={{
 	}
 } forEach GS_ProtectedObject;};
 
-_exitCondition={count GS_Protected_Object ==0;};
+_exitCondition={count GS_ProtectedObject ==0;};
 
-[_function,GS_FrameHandlerDelay,[],{},{},true,_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
+[_function,GS_FrameHandlerDelay,[],{},{},{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;

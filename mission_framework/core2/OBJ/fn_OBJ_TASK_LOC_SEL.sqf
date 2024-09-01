@@ -25,5 +25,6 @@ _AOSize=1500;
 }foreach _taskIDs;
 
 call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
+call core2_fnc_OBJ_COMPLETE_CHECK;
 
 ["OBJ_TASK_LOC_SEL End",1] call core2_fnc_PRINT_SYSLOG;

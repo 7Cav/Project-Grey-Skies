@@ -62,4 +62,10 @@ class core2
 		class WOODLAND_MORTAR {};
 		class WOODLAND_RADIO {};
 	};
+	class OBJ_MANAGER
+	{
+		file = "core2\OBJ\OBJ_MANAGER";
+		class OBJ_COMPLETE_CHECK{};
+		class OBJ_PROTECTED_OBJECT_CHECK{};
+	};
 };

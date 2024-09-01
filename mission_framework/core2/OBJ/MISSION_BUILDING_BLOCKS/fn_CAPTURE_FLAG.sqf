@@ -61,4 +61,4 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 //_addID;
 ["CAPTURE_FLAG END",1] call core2_fnc_PRINT_SYSLOG;
 
-[_childTaskID,_flag] append GS_Protected_Object;
+[_childTaskID,_flag] append GS_ProtectedObject;
