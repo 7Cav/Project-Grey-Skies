@@ -30,5 +30,7 @@ _group setVariable ["_taskID",_childTaskID];
 	}];
 }foreach _Events;
 
-[_childTaskID,_group] append GS_ProtectedObject;
+_array=missionNamespace getVariable "GS_ProtectedObject";
+_array append [_childTaskID,_flag];
+missionNamespace setVariable ["GS_ProtectedObject",_array];
 

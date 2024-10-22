@@ -62,3 +62,7 @@ _addID = [_flag, "Capture Flag", _icon, _icon,
 ["CAPTURE_FLAG END",1] call core2_fnc_PRINT_SYSLOG;
 
 [_childTaskID,_flag] append GS_ProtectedObject;
+
+_array=missionNamespace getVariable "GS_ProtectedObject";
+_array append [_childTaskID,_flag];
+missionNamespace setVariable ["GS_ProtectedObject",_array];

@@ -33,8 +33,9 @@ _group = _groupUnitArray select 1;
 [_group,"OBJ_CAPTURE_HQ","HQ_OFFICER","Kill the Enemy Officer", "Kill the Officer"] call core2_fnc_KILL_GROUP;
 
 //Collect Intel
-
-
+_array=missionNamespace getVariable "GS_OBJArray";
+_array append ["OBJ_CAPTURE_HQ",["HQ_FLAG","HQ_OFFICER"]];
+missionNamespace setVariable ["GS_OBJArray",_array];
 
 
 ["OBJ_CAPTURE_HQ_LOGIC End",1] call core2_fnc_PRINT_SYSLOG;
