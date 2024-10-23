@@ -37,4 +37,3 @@ _function={
 _exitCondition={count GS_ProtectedObject ==0;};
 
 [_function,GS_FrameHandlerDelay,[],{},{},{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
-try 
