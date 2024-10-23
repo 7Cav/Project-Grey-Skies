@@ -22,7 +22,10 @@ _function={
 	{
 		_childTaskID= _x select 0;
 		_protectedThing = _x select 1;
-		if (!(alive _protectedThing) || (isNull _protectedThing) || (isNull _protectedThing && {count units _protectedThing >0}))
+		_test1=try {!(alive _protectedThing);} catch {false;};
+		_test2=try {(isNull _protectedThing) ;} catch {false;};
+		_test3=try {(isNull _protectedThing && {count units _protectedThing >0}) ;} catch {false;};
+		if (_test1 || _test2 || _test3)
 		then {
 			[_childTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 			_array deleteAt _forEachIndex;
@@ -34,3 +37,4 @@ _function={
 _exitCondition={count GS_ProtectedObject ==0;};
 
 [_function,GS_FrameHandlerDelay,[],{},{},{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
+try 
