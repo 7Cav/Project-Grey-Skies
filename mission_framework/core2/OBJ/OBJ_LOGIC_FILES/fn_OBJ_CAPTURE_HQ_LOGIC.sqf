@@ -34,7 +34,7 @@ _group = _groupUnitArray select 1;
 
 //Collect Intel
 _array=missionNamespace getVariable "GS_OBJArray";
-_array append ["OBJ_CAPTURE_HQ",["HQ_FLAG","HQ_OFFICER"]];
+_array append [["OBJ_CAPTURE_HQ",["HQ_FLAG","HQ_OFFICER"]]];
 missionNamespace setVariable ["GS_OBJArray",_array];
 
 

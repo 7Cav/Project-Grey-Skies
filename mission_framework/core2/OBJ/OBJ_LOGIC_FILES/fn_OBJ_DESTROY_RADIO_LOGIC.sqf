@@ -27,7 +27,7 @@ _tower=nearestObject [_TaskPOS, "Jbad_opx2_radiomast"];
 [_tower,"OBJ_DESTROY_RADIO","RADIO_TOWER","Destroy the Radio Tower", "Destroy the Radio Tower"] call core2_fnc_DESTROY_OBJECT;
 
 _array=missionNamespace getVariable "GS_OBJArray";
-_array append ["OBJ_DESTROY_RADIO",["RADIO_TOWER"]];
+_array append [["OBJ_DESTROY_RADIO",["RADIO_TOWER"]]];
 missionNamespace setVariable ["GS_OBJArray",_array];
 
 

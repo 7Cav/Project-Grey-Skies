@@ -25,7 +25,7 @@ _unit=nearestObject [_TaskPOS,"StaticMortar"];
 
 
 _array=missionNamespace getVariable "GS_OBJArray";
-_array append ["OBJ_DESTROY_MORTARS",["MORTARS_TUBE"]];
+_array append [["OBJ_DESTROY_MORTARS",["MORTARS_TUBE"]]];
 missionNamespace setVariable ["GS_OBJArray",_array];
 
 
