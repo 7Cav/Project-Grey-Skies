@@ -29,8 +29,3 @@ _group setVariable ["_taskID",_childTaskID];
 		[_taskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 	}];
 }foreach _Events;
-
-_array=missionNamespace getVariable "GS_ProtectedObject";
-_array append [[_childTaskID,_group]];
-missionNamespace setVariable ["GS_ProtectedObject",_array];
-
