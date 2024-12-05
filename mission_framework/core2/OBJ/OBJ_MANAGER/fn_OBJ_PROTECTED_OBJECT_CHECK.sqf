@@ -29,11 +29,20 @@ _function={
 		then {
 			[_childTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 			_array deleteAt _forEachIndex;
-		}
+		};
+		if (_childTaskID call BIS_fnc_taskCompleted)
+		then {
+			_array deleteAt _forEachIndex;
+		};
 	} forEach _array;
 	missionNamespace setVariable ["GS_ProtectedObject",_array];
 };
 
 _exitCondition={count GS_ProtectedObject ==0;};
 
-[_function,GS_FrameHandlerDelay,[],{},{},{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
+_exitFunction={
+	_array=[];
+	missionNamespace setVariable ["GS_ProtectedObject",_array];
+};
+
+[_function,GS_FrameHandlerDelay,[],{},_exitFunction,{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;

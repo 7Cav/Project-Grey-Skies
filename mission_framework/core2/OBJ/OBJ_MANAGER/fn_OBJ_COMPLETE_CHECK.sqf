@@ -47,8 +47,10 @@ _cleanupFunction={
 private _position = missionNamespace getVariable "GS_MainAOCenterPOS"; // Get position
 private _radius = missionNamespace getVariable "GS_AOSize";
 [_position, _radius] call core2_fnc_CLEANUP_AO;
+deleteMarker "MainAO";
+_array=[];
+missionNamespace setVariable ["GS_OBJArray",_array];
 call core2_fnc_AO_LOC_GET;
-
 };
 
 [_function,GS_FrameHandlerDelay,[],{},_cleanupFunction,{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
