@@ -47,6 +47,7 @@ _cleanupFunction={
 private _position = missionNamespace getVariable "GS_MainAOCenterPOS"; // Get position
 private _radius = missionNamespace getVariable "GS_AOSize";
 [_position, _radius] call core2_fnc_CLEANUP_AO;
+call core2_fnc_AO_LOC_GET;
 
 };
 
