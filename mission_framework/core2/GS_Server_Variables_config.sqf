@@ -18,3 +18,5 @@
 GS_FrameHandlerDelay=30;
 GS_ProtectedObject=[];
 GS_OBJArray=[];
+GS_AOSize=2000;
+GS_MainAOCenterPOS=[];

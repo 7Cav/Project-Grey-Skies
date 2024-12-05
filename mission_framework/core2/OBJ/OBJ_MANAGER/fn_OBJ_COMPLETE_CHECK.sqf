@@ -43,4 +43,11 @@ _function={
 
 _exitCondition={count GS_OBJArray ==0;};
 
-[_function,GS_FrameHandlerDelay,[],{},{/*Add Code to cleanup and start new AO*/ },{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
+_cleanupFunction={
+private _position = missionNamespace getVariable "GS_MainAOCenterPOS"; // Get position
+private _radius = missionNamespace getVariable "GS_AOSize";
+[_position, _radius] call core2_fnc_CLEANUP_AO;
+
+};
+
+[_function,GS_FrameHandlerDelay,[],{},_cleanupFunction,{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;

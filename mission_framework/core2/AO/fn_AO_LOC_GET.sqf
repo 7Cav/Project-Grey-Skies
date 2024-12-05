@@ -20,7 +20,7 @@ _ArrayofAOs=[];
 _RandomAO="";
 _AOInfo=[];
 _LookForText="zone_spawn_";
-
+_AOSize = missionNamespace getVariable "GS_AOSize";
 // Get all markers
 private _allMarkers = allMapMarkers;
 // Loop through all markers and check if their name matches the prefix
@@ -40,6 +40,6 @@ _AOInfo=getMarkerPos _RandomAO;
 [format["AO Location: %1",_AOInfo],2] call core2_fnc_PRINT_SYSLOG;
 [format["AO_LOC_GET End",_AOInfo],1] call core2_fnc_PRINT_SYSLOG;
 
-["MainAO",2000,"Clear the AO",_AOInfo] call core2_fnc_DRAW_AO;
-
+["MainAO",_AOSize,"Clear the AO",_AOInfo] call core2_fnc_DRAW_AO;
+missionNamespace setVariable ["GS_MainAOCenterPOS",_AOInfo];
 [_AOInfo,1] call core2_fnc_OBJ_TASK_SEL;
