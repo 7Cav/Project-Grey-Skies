@@ -18,3 +18,4 @@ params ["_position", "_radius"];
 {deleteVehicle _x} foreach (allunits select {_x distance2D _position <= _radius }); 
 {deleteVehicle _x} foreach (allDead select {_x distance2D _position <= _radius }); 
 {deleteVehicle _x} foreach (vehicles select {_x distance2D _position <= _radius });
+{deleteVehicle _x} foreach (-1 allObjects 0 select {_x distance2D _position <= _radius });
