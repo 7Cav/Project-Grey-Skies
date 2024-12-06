@@ -20,11 +20,11 @@ params ["_TaskPOS"];
 [GS_MORTAR_OBJS,_TaskPOS] call core2_fnc_STRUCTURE_BUILDER;
 [west, "OBJ_DESTROY_MORTARS", ["Do this and you get a cookie", "Destroy Mortar Position", "cookiemarker"], objNull, 1, 2, false] call BIS_fnc_taskCreate;
 //Builds Objects related to competing the Tasks/Objectives
-_unit=nearestObject [_TaskPOS,"StaticMortar"];
+private _unit=nearestObject [_TaskPOS,"StaticMortar"];
 [_unit,"OBJ_DESTROY_MORTARS","MORTARS_TUBE","Destroy the Mortar Tube", "Destroy the Mortar Tube"] call core2_fnc_DESTROY_OBJECT;
 
 
-_array=missionNamespace getVariable "GS_OBJArray";
+private _array=missionNamespace getVariable "GS_OBJArray";
 _array append [["OBJ_DESTROY_MORTARS",["MORTARS_TUBE"]]];
 missionNamespace setVariable ["GS_OBJArray",_array];
 

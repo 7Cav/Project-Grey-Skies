@@ -18,19 +18,19 @@
 
 
 _function={
-	_array=missionNamespace getVariable "GS_OBJArray";
+	private _array=missionNamespace getVariable "GS_OBJArray";
 	if (_array isEqualTo []) exitWith {["GS_OBJArray is Empty",1] call core2_fnc_PRINT_SYSLOG;};
 	{
-		_ParentTaskID= _x select 0;
-		_ChildTaskIDs = _x select 1;
-		_childTaskStatusArray=[];
+		private _ParentTaskID= _x select 0;
+		private _ChildTaskIDs = _x select 1;
+		private _childTaskStatusArray=[];
 		{
-			_taskStatus=_x call BIS_fnc_taskCompleted;
+			private _taskStatus=_x call BIS_fnc_taskCompleted;
 			_childTaskStatusArray pushBackUnique _taskStatus;
 		}forEach _ChildTaskIDs;
 
-		_NumOfElements=count _childTaskStatusArray;
-		_ArrayValue = _childTaskStatusArray select 0;
+		private _NumOfElements=count _childTaskStatusArray;
+		private _ArrayValue = _childTaskStatusArray select 0;
 		if (_NumOfElements==1 && _ArrayValue==true) then 
 		{
 			[_ParentTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;

@@ -22,18 +22,18 @@ params ["_TaskPOS"];
 //Builds Objects related to competing the Tasks/Objectives
 
 //CAPTURE THE flag
-_flag=nearestObject [_TaskPOS, "FlagCarrier"];
+private _flag=nearestObject [_TaskPOS, "FlagCarrier"];
 [_flag,"OBJ_CAPTURE_HQ","HQ_FLAG"] call core2_fnc_CAPTURE_FLAG;
 
 //Kill/Capture Officer
-_groupUnitArray=[rf_officer,_TaskPOS] call core2_fnc_SINGLE_UNIT_SPAWN;
-_unit = _groupUnitArray select 0;
-_group = _groupUnitArray select 1;
+private _groupUnitArray=[rf_officer,_TaskPOS] call core2_fnc_SINGLE_UNIT_SPAWN;
+private _unit = _groupUnitArray select 0;
+private _group = _groupUnitArray select 1;
 
 [_group,"OBJ_CAPTURE_HQ","HQ_OFFICER","Kill the Enemy Officer", "Kill the Officer"] call core2_fnc_KILL_GROUP;
 
 //Collect Intel
-_array=missionNamespace getVariable "GS_OBJArray";
+private _array=missionNamespace getVariable "GS_OBJArray";
 _array append [["OBJ_CAPTURE_HQ",["HQ_FLAG","HQ_OFFICER"]]];
 missionNamespace setVariable ["GS_OBJArray",_array];
 
