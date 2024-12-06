@@ -48,8 +48,10 @@ private _position = missionNamespace getVariable "GS_MainAOCenterPOS"; // Get po
 private _radius = missionNamespace getVariable "GS_AOSize";
 [_position, _radius] call core2_fnc_CLEANUP_AO;
 deleteMarker "MainAO";
-_array=[];
+private _array=[];
 missionNamespace setVariable ["GS_OBJArray",_array];
+missionNamespace setVariable ["GS_MainPOIPOS",_array];
+missionNamespace setVariable ["GS_MainAOCenterPOS",_array];
 call core2_fnc_AO_LOC_GET;
 };
 
