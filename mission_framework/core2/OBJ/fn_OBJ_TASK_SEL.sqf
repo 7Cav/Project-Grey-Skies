@@ -17,11 +17,11 @@
  */
 params ["_AOInfo", ["_NumOfTasks",0]];
 ["OBJ_TASK_SEL Start",1] call core2_fnc_PRINT_SYSLOG;
-_TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
+private _TaskIDs=['OBJ_CAPTURE_HQ','OBJ_DESTORY_RADIO'];
 //_RandomNumber = random 100;
 
 //The Max Number is determined by the number of times in the TaskList
-_TaskList = ['OBJ_DESTROY_MORTARS'];
+private _TaskList = ['OBJ_DESTROY_MORTARS'];
 /* Task ID list
 'OBJ_DESTROY_SAM'
 'OBJ_DESTROY_MORTARS'
@@ -44,12 +44,12 @@ _TaskList = ['OBJ_DESTROY_MORTARS'];
 */
 
 //Place into the TaskList the TaskIDs then pop it out of the Task list, the Max Number is determined by the number of times in the TaskList
-_i=0;
+private _i=0;
 while {_i<_NumOfTasks} do {
-	_RandomNum=0;
-	_TotalNumberofTasks = count _TaskList;
+	private _RandomNum=0;
+	private _TotalNumberofTasks = count _TaskList;
 	_RandomNum = floor random _TotalNumberofTasks;
-	_TaskID = _TaskList select _RandomNum;
+	private _TaskID = _TaskList select _RandomNum;
 	_TaskIDs pushBack _TaskID;
 	_TaskList deleteAt _RandomNum;
 	_i=_i+1;

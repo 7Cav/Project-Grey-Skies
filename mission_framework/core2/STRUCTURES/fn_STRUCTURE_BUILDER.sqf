@@ -17,10 +17,10 @@
  */
 params ["_CompList", "_TaskPOS"];
  ["STRUCTURE_BUILDER Start",1] call core2_fnc_PRINT_SYSLOG;
-_RandomNum=0;
-_TotalNumberofComps = count _CompList;
+private _RandomNum=0;
+private _TotalNumberofComps = count _CompList;
 _RandomNum = floor random _TotalNumberofComps;
-_Comp=_CompList select _RandomNum;
+private _Comp=_CompList select _RandomNum;
 
 [format["Total Number of Comps: %1, Random Number: %2",_TotalNumberofComps,_RandomNum],2] call core2_fnc_PRINT_SYSLOG;
 

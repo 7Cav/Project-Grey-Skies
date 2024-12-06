@@ -16,11 +16,11 @@
  */
 ["AO_LOC_GET Start",1] call core2_fnc_PRINT_SYSLOG;
 //Initialize Variables
-_ArrayofAOs=[];
-_RandomAO="";
-_AOInfo=[];
-_LookForText="zone_spawn_";
-_AOSize = missionNamespace getVariable "GS_AOSize";
+private _ArrayofAOs=[];
+private _RandomAO="";
+private _AOInfo=[];
+private _LookForText="zone_spawn_";
+private _AOSize = missionNamespace getVariable "GS_AOSize";
 // Get all markers
 private _allMarkers = allMapMarkers;
 // Loop through all markers and check if their name matches the prefix
