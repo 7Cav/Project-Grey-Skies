@@ -23,8 +23,8 @@ private _AOSize=_AOSizeMax-_AOSizeEdgePrevention;
 {
 	_TaskPOS=[_AOInfo,0,_AOSize,0,0,0.1,0,[],[]] call BIS_fnc_findSafePos;
 	[_x,_TaskPOS] call core2_fnc_OBJ_TASK_MANGER;
-	private _array=missionNamespace getVariable "GS_MainPOIPOS";
-	_array pushBack _TaskPOS;
+	private _arrayPOS=missionNamespace getVariable "GS_MainPOIPOS";
+	_arrayPOS pushBack _TaskPOS;
 	missionNamespace setVariable ["GS_MainPOIPOS",_array];
 	[format["Task ID: %1, Task Position: %2",_x,_TaskPOS],3] call core2_fnc_PRINT_SYSLOG;
 }foreach _taskIDs;
