@@ -25,7 +25,7 @@ private _AOSize=_AOSizeMax-_AOSizeEdgePrevention;
 	[_x,_TaskPOS] call core2_fnc_OBJ_TASK_MANGER;
 	private _arrayPOS=missionNamespace getVariable "GS_MainPOIPOS";
 	_arrayPOS pushBack _TaskPOS;
-	missionNamespace setVariable ["GS_MainPOIPOS",_array];
+	missionNamespace setVariable ["GS_MainPOIPOS",_arrayPOS];
 	[format["Task ID: %1, Task Position: %2",_x,_TaskPOS],3] call core2_fnc_PRINT_SYSLOG;
 }foreach _taskIDs;
 
