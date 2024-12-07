@@ -16,33 +16,41 @@
  *
  */
 
-_function={
-	_array=missionNamespace getVariable "GS_ProtectedObject";
+private _function = {
+	private _array = missionNamespace getVariable ["GS_ProtectedObject", []];
 	if (_array isEqualTo []) exitWith {["GS_ProtectedObject is Empty",1] call core2_fnc_PRINT_SYSLOG;};
+
 	{
-		_childTaskID= _x select 0;
-		_protectedThing = _x select 1;
-		_test1=try {!(alive _protectedThing);} catch {false;};
-		_test2=try {(isNull _protectedThing) ;} catch {false;};
-		_test3=try {(isNull _protectedThing && {count units _protectedThing >0}) ;} catch {false;};
-		if (_test1 || _test2 || _test3)
-		then {
+		_x params ["_childTaskID", "_protectedThing"];
+		private _test1 = !(alive _protectedThing);
+		private _test2 = !(isNull _protectedThing);
+		private _test3 = count units _protectedThing > 0;
+		if (_test1 || _test2 || _test3) then {
 			[_childTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
 			_array deleteAt _forEachIndex;
 		};
-		if (_childTaskID call BIS_fnc_taskCompleted)
-		then {
+		if (_childTaskID call BIS_fnc_taskCompleted) then {
 			_array deleteAt _forEachIndex;
 		};
 	} forEach _array;
+
 	missionNamespace setVariable ["GS_ProtectedObject",_array];
 };
 
-_exitCondition={count GS_ProtectedObject ==0;};
-
-_exitFunction={
-	_array=[];
-	missionNamespace setVariable ["GS_ProtectedObject",_array];
+private _exitCondition = {
+	private _array = missionNamespace getVariable ["GS_ProtectedObject", []];
+	_array isEqualTo [];
 };
 
-[_function,GS_FrameHandlerDelay,[],{},_exitFunction,{true},_exitCondition] call CBA_fnc_createPerFrameHandlerObject;
+private _exitFunction = {
+	missionNamespace setVariable ["GS_ProtectedObject", []];
+};
+
+[
+	_function,
+	GS_FrameHandlerDelay,
+	[],
+	{},_exitFunction,
+	{true},
+	_exitCondition
+] call CBA_fnc_createPerFrameHandlerObject;

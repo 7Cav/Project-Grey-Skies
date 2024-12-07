@@ -16,18 +16,22 @@
  *
  */
 params ["_AOInfo", "_TaskIDs"];
+
 ["OBJ_TASK_LOC_SEL Start",1] call core2_fnc_PRINT_SYSLOG;
-private _AOSizeMax=missionNamespace getVariable "GS_AOSize";
-private _AOSizeEdgePrevention=missionNamespace getVariable "GS_AOSizeEdgePrevention";
-private _AOSize=_AOSizeMax-_AOSizeEdgePrevention;
+
+private _AOSizeMax = missionNamespace getVariable "GS_AOSize";
+private _AOSizeEdgePrevention = missionNamespace getVariable "GS_AOSizeEdgePrevention";
+private _AOSize = _AOSizeMax - _AOSizeEdgePrevention;
+
 {
-	_TaskPOS=[_AOInfo,0,_AOSize,0,0,0.1,0,[],[]] call BIS_fnc_findSafePos;
-	[_x,_TaskPOS] call core2_fnc_OBJ_TASK_MANGER;
-	private _arrayPOS=missionNamespace getVariable "GS_MainPOIPOS";
+	private _TaskPOS = [_AOInfo, 0, _AOSize, 0, 0, 0.1, 0, [], []] call BIS_fnc_findSafePos;
+	[_x, _TaskPOS] call core2_fnc_OBJ_TASK_MANGER;
+	private _arrayPOS = missionNamespace getVariable "GS_MainPOIPOS";
 	_arrayPOS pushBack _TaskPOS;
-	missionNamespace setVariable ["GS_MainPOIPOS",_arrayPOS];
+	missionNamespace setVariable ["GS_MainPOIPOS", _arrayPOS];
+
 	[format["Task ID: %1, Task Position: %2",_x,_TaskPOS],3] call core2_fnc_PRINT_SYSLOG;
-}foreach _taskIDs;
+} foreach _taskIDs;
 
 call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
 call core2_fnc_OBJ_COMPLETE_CHECK;
