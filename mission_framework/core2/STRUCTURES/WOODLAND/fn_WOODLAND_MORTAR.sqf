@@ -17,7 +17,7 @@
  ["WOODLAND_MORTAR Start",1] call core2_fnc_PRINT_SYSLOG;
 _data=[
 [
-	["rhs_2b14_82mm_vdv",[-0.0356362,-0.0379317,-0.0710573],360,1,0,[0.174922,-0.353143],"","",true,false], 
+	["O_Mortar_01_F",[-0.0356362,-0.0379317,-0.0710573],360,1,0,[0.174922,-0.353143],"","",true,false], 
 	["Land_HelipadEmpty_F",[2.5,0.5,0],0,1,0,[0,0],"","",true,false], 
 	["Land_ClutterCutter_large_F",[-2.26027,-3.05998,0],0,1,0,[0,0],"","",true,false], 
 	["Land_ClutterCutter_large_F",[2.83855,2.7692,0],0,1,0,[0,0],"","",true,false], 
