@@ -8,7 +8,7 @@
 
 */
 //
-rf_flag = "Flag_CSAT_F";
+rf_flag = "\A3\Data_F\Flags\Flag_CSAT_CO.paa";
 
 // OPFOR Infantry - General
 rf_rifleman =                 "O_Soldier_F";
