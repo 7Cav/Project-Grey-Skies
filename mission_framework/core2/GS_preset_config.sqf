@@ -15,6 +15,6 @@
  *
  */
 
-GS_preset_opfor="CSAT";
+GS_preset_opfor="KDF";
 
 GS_preset_structure="WOODLAND";
