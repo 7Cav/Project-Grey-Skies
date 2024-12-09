@@ -1,7 +1,7 @@
 switch (GS_preset_opfor) do {
     case  "KDF": {[] call compileFinal preprocessFileLineNumbers "core2\OPFOR\KDF_3CB.sqf";};
-    /*case  2: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\rhs_afrf_d.sqf";};
-    case  3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan_army.sqf";};
+    case  "CSAT": {[] call compileFinal preprocessFileLineNumbers "core2\OPFOR\CSAT.sqf";};
+    /*case  3: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\takistan_army.sqf";};
     case  4: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\3cb_ldf_hybrid.sqf";};
     case  5: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\3cb_ion_d.sqf";};
     case  6: {[] call compileFinal preprocessFileLineNumbers "presets\opfor\3cb_ion_w.sqf";};
