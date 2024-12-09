@@ -33,7 +33,7 @@ private _AOSize = _AOSizeMax - _AOSizeEdgePrevention;
 	[format["Task ID: %1, Task Position: %2",_x,_TaskPOS],3] call core2_fnc_PRINT_SYSLOG;
 } foreach _taskIDs;
 
-//call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
+call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
 call core2_fnc_OBJ_COMPLETE_CHECK;
 
 ["OBJ_TASK_LOC_SEL End",1] call core2_fnc_PRINT_SYSLOG;
