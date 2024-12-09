@@ -23,7 +23,7 @@ private _function = {
 	{
 		_x params ["_childTaskID", "_protectedThing"];
 		private _test1 = !(alive _protectedThing);
-		private _test2 = !(isNull _protectedThing);
+		private _test2 = (isNull _protectedThing);
 		private _test3 = count units _protectedThing > 0;
 		if (_test1 || _test2 || _test3) then {
 			[_childTaskID,"SUCCEEDED",false] call BIS_fnc_taskSetState;
