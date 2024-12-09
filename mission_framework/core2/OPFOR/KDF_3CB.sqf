@@ -7,6 +7,9 @@
        
 
 */
+//
+rf_flag = "\UK3CB_Factions\addons\UK3CB_Factions_KDF\Flag\KDF_flag_co.paa";
+
 // OPFOR Infantry - General
 rf_rifleman =                 "UK3CB_KDF_O_RIF_1";
 rf_autorifleman =             "UK3CB_KDF_O_AR";

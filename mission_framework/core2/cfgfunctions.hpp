@@ -1,5 +1,11 @@
 class core2
 {
+	class INIT
+	{
+		file = "core2"
+		class init_core2 {};
+		class init_preset {};
+	}
 	class AO
 	{
 		file = "core2\AO";
@@ -15,6 +21,7 @@ class core2
 		file = "core2\MANAGERS";
 		class GET_COMPS {};
 		class DRAW_AO {};
+		class CLEANUP_AO {};
 	};
 	class OBJ
 	{
@@ -30,10 +37,17 @@ class core2
 		class OBJ_DESTROY_MORTARS_LOGIC {};
 		class OBJ_DESTROY_RADIO_LOGIC {};
 	};
+	class MISSION_BUILDING_BLOCKS
+	{
+		file = "core2\OBJ\MISSION_BUILDING_BLOCKS";
+		class CAPTURE_FLAG {};
+		class KILL_GROUP {};
+		class DESTROY_OBJECT {};
+	};
 	class OPFOR
 	{
-		file = "core2\OPFOR";
-		
+		file = "core2\OPFOR\SPAWNERS";
+		class SINGLE_UNIT_SPAWN {};
 	};
 	class STRUCTURES
 	{
@@ -48,5 +62,11 @@ class core2
 		class WOODLAND_HQ {};
 		class WOODLAND_MORTAR {};
 		class WOODLAND_RADIO {};
+	};
+	class OBJ_MANAGER
+	{
+		file = "core2\OBJ\OBJ_MANAGER";
+		class OBJ_COMPLETE_CHECK{};
+		class OBJ_PROTECTED_OBJECT_CHECK{};
 	};
 };

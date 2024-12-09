@@ -21,11 +21,11 @@ params ["_name", "_size","_text","_loc"];
 
 //_name="MainAO"; 
 //_radi=1500; 
-_brush="Border"; 
-_color="colorOPFOR"; 
+private _brush="Border"; 
+private _color="colorOPFOR"; 
 //_txt="Clear the AO"; 
-_alpha=0.4; 
-_shape="ELLIPSE";
+private _alpha=0.4; 
+private _shape="ELLIPSE";
 createMarker [_name, _loc];  
 _name setMarkerSize [_size, _size]; 
 _name setMarkerBrush _brush; 

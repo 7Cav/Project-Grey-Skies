@@ -15,8 +15,12 @@
  */
 params [];
 ["GET_COMPS Start",1] call core2_fnc_PRINT_SYSLOG;
-GS_HQ_OBJS=call core2_fnc_WOODLAND_HQ;
-GS_RADIO_OBJS=call core2_fnc_WOODLAND_RADIO;
-GS_MORTAR_OBJS=call core2_fnc_WOODLAND_MORTAR;
-
+switch(GS_preset_structure) do
+{
+	case "WOODLAND": {
+		GS_HQ_OBJS=call core2_fnc_WOODLAND_HQ;
+		GS_RADIO_OBJS=call core2_fnc_WOODLAND_RADIO;
+		GS_MORTAR_OBJS=call core2_fnc_WOODLAND_MORTAR;
+		};
+};
 ["GET_COMPS End",1] call core2_fnc_PRINT_SYSLOG;

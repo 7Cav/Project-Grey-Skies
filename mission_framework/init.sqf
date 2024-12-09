@@ -4,12 +4,14 @@
 
 if (!isDedicated) then {
 
-	[] spawn mScripts_fnc_initializePlayer;
+	//[] spawn mScripts_fnc_initializePlayer;
 
 };
 
-if (isDedicated || isMultiplayer) then {
 
+
+if (isDedicated || isMultiplayer) then {
+	call core2_fnc_init_core2;
 
 
 };
