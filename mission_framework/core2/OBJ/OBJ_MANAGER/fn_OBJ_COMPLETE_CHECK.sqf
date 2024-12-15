@@ -1,19 +1,24 @@
 /*
+ * Function: core2_fnc_OBJ_PROTECTED_OBJECT_CHECK
  * Author: 7th Cav Dev Team, Sparrow
- * [Description of Function]
+ * 
+ * Description:
+ * This function monitors the status of tasks stored in the `GS_OBJArray` mission namespace variable. 
+ * It marks parent tasks as "SUCCEEDED" if all associated child tasks are completed. The script uses 
+ * a per-frame handler to repeatedly check the task statuses and cleans up mission-specific variables 
+ * when the array becomes empty.
  *
  * Arguments:
- * [List of Arguements]
+ * None.
  *
  * Return Value:
- * Nothing
+ * None.
  *
  * Example:
- * call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK
+ * call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
  *
- *
- * Public: No
- *
+ * Public:
+ * No.
  */
 
 

@@ -1,21 +1,25 @@
 /*
-	Modified by: 7Cav Dev Team, Sparrow.P
-	Original Author: 7erra
-
-	Description:
-	 Makes a flag pole capturable
-
-	Parameter(s):
-	 0: OBJECT - Flag
-	 (optional) 1: CODE - Code executed after the cap
-
-	Returns:
-	NUMBER - Action ID of the Hold Action
-
-	Example:
-	[this] call TAG_fncName;
-	[this,{hint "Capped";}] call TAG_fncName;
-*/
+ * Function: core2_fnc_CAPTURE_FLAG
+ * Modified by: 7Cav Dev Team, Sparrow.P
+ * Original Author: 7erra
+ *
+ * Description:
+ * Makes a flagpole capturable and creates an associated task using the Arma 3 Task Framework. This allows players to interact with the flagpole, capturing it by completing a hold action, which updates the task state upon success.
+ *
+ * Parameter(s):
+ * 0. _flag (Object): The flagpole object to which this functionality will be applied.
+ * 1. _parentTaskID (String): The ID of the parent task related to capturing the flag (e.g., "OBJ_CAPTURE_HQ").
+ * 2. _childTaskID (String): The ID of the child task specifically associated with the flag capture.
+ *
+ * Returns:
+ * None.
+ *
+ * Example:
+ * [_flag, "OBJ_CAPTURE_HQ", "HQ_FLAG"] call core2_fnc_CAPTURE_FLAG;
+ *
+ * Public:
+ * No.
+ */
 ["CAPTURE_FLAG Start",1] call core2_fnc_PRINT_SYSLOG;
 params ["_flag","_parentTaskID","_childTaskID"];
 

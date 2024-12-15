@@ -1,19 +1,24 @@
 /*
+ * Function: core2_fnc_OBJ_PROTECTED_OBJECT_CHECK
  * Author: 7th Cav Dev Team, Sparrow
- * [Description of Function]
+ * 
+ * Description:
+ * This function monitors objects stored in the `GS_ProtectedObject` mission namespace variable. 
+ * It ensures that tasks related to these objects are updated to "SUCCEEDED" when conditions 
+ * like object destruction, invalidation, or group unit count exceed specified thresholds are met.
+ * The function operates as a per-frame handler and cleans up the `GS_ProtectedObject` variable when finished.
  *
  * Arguments:
- * [List of Arguements]
+ * None.
  *
  * Return Value:
- * Nothing
+ * None.
  *
  * Example:
- * call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK
+ * call core2_fnc_OBJ_PROTECTED_OBJECT_CHECK;
  *
- *
- * Public: No
- *
+ * Public:
+ * No.
  */
 
 private _function = {

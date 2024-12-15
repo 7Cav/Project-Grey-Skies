@@ -1,21 +1,24 @@
 /*
+ * Function: core2_fnc_DRAW_AO
  * Author: 7th Cav Dev Team, Sparrow
- * Draws a circle on the Map to mark the AO
  *
- * Arguments:
- * 0: name - Name of the Marker
- * 1: size - Size of the Marker 
- * 2: text - Text associated with AO
- * 3: loc - Location to place the marker
- * 
- * Return Value:
- * Nothing
+ * Description:
+ * Draws a circular Area of Operations (AO) marker on the map with customizable size, text, and color attributes.
+ *
+ * Parameter(s):
+ * 1. _name (String): The name of the marker.
+ * 2. _size (Number): The radius of the AO marker in meters.
+ * 3. _text (String): The label or description associated with the AO.
+ * 4. _loc (Array): The map coordinates ([x, y]) where the AO marker should be centered.
+ *
+ * Returns:
+ * None.
  *
  * Example:
- * ["MainAO",2000,Clear the AO,_AOInfo] call core2_fnc_DRAW_AO
+ * ["MainAO", 2000, "Clear the AO", _AOInfo] call core2_fnc_DRAW_AO;
  *
- * Public: No
- *
+ * Public:
+ * No.
  */
 params ["_name", "_size","_text","_loc"];
 

@@ -8,7 +8,7 @@
  * Return Value:
  * Nothing
  *
- * Example:////////////
+ * Example:
  * call core2_fnc_AO_LOC_GET
  *
  * Public: No
