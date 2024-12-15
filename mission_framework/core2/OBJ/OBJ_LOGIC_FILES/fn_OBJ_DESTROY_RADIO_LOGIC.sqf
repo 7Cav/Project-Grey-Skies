@@ -3,7 +3,7 @@
  * Builds out the Destroy Radio Tower Objective
  *
  * Arguments:
- * 0: TaskPos - Position of Objective
+ * 0. TaskPos (Array): Position of Objective
  *
  * Return Value:
  * Nothing

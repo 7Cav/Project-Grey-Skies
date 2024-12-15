@@ -1,18 +1,22 @@
 /*
+ * Function: core2_fnc_SINGLE_UNIT_SPAWN
  * Author: 7th Cav Dev Team, Sparrow
- * [Description of Function]
+ * 
+ * Description:
+ * Spawns a single unit at the specified position, creating a new group for the unit. The function returns an array containing the spawned unit and its group.
  *
  * Arguments:
- * [List of Arguements]
+ * 0. _UnitToSpawn (String): The class name of the unit to spawn (e.g., "B_Soldier_F" for a NATO rifleman).
+ * 1. _position (Array): The position where the unit will spawn in the format `[x, y, z]`.
  *
  * Return Value:
- * Nothing
+ * Array: Contains the spawned unit and the group, in the format `[_unit, _group]`.
  *
  * Example:
- * [rf_officer,_position] call core2_fnc_SINGLE_UNIT_SPAWN;
+ * [rf_officer, _position] call core2_fnc_SINGLE_UNIT_SPAWN;
  *
- * Public: No
- *
+ * Public:
+ * No.
  */
 params ["_UnitToSpawn", "_position"];
 

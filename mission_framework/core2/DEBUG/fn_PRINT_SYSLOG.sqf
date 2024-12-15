@@ -1,18 +1,22 @@
 /*
+ * Function: core2_fnc_PRINT_SYSLOG
  * Author: 7th Cav Dev Team, Sparrow
- * Prints messages out messages from the code based on the debugging level set here
  * 
+ * Description:
+ * Prints debug messages to the system chat and the RPT log based on the specified severity level. Only messages with a severity code less than or equal to the configured severity level will be printed.
+ *
  * Arguments:
- * [List of Arguements]
+ * 1. _Message (String): The message to be printed.
+ * 2. _SeverityCode (Number): The severity code of the message. Messages with severity codes greater than the configured severity level will not be printed.
  *
  * Return Value:
- * Nothing
+ * None.
  *
  * Example:
- * call rScripts_fnc_tightlz_startaction
+ * ["Landing zone secured", 2] call core2_fnc_PRINT_SYSLOG;
  *
- * Public: No
- *
+ * Public:
+ * No.
  */
 params ["_Message", "_SeverityCode"];
 

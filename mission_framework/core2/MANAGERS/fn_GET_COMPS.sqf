@@ -2,6 +2,7 @@
  * Author: CW3.Sparrow.P
  * Gets each of the compositions and stores them in global variables
  * Switch out the function calls here to be Desert, Woodland, or Snow based on the map
+ * 
  * Arguments:
  * N/A
  *
